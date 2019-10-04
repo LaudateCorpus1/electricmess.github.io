@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": ["./resources/assets/js/*"]
+        },
+        "target": "es5",
+        "lib": ["dom", "es2015"],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noImplicitThis": false,
+        "isolatedModules": false,
+        "strictNullChecks": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "jsx": "react"
+    },
+    "include": ["resources/assets/js/**/*"],
+    "compileOnSave": false
+}

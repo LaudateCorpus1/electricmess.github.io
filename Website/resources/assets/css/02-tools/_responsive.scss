@@ -1,0 +1,54 @@
+/**
+ *  Responsive Mixin
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *  @author vcroteau
+ *
+ *  _TAB  Table of Contents
+ *  _MIX  Mixins
+ */
+
+
+//===========/----------------------------------------------
+//  [_MIX]  /  Mixins
+//=========/------------------------------------------------
+@mixin mobile {
+    @media (max-width: $tablet-width - 1px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin below($size) {
+    @media (max-width: $size - 1px) {
+        @content;
+    }
+}
+
+@mixin above($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin between($min, $max) {
+    @media (min-width: $min) and (max-width: $max - 1px) {
+        @content;
+    }
+}

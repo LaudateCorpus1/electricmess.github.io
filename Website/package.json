@@ -1,0 +1,48 @@
+{
+    "name": "alexiabf-website",
+    "version": "1.0.0",
+    "description": "Alexia BF website",
+    "author": "vcroteau",
+    "license": "UNLICENSED",
+    "private": true,
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.20.1",
+        "@types/webpack-env": "^1.13.1",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-exponentiation-operator": "^6.24.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "browser-sync": "^2.24.5",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "copy-webpack-plugin": "^4.5.1",
+        "cross-env": "^5.1",
+        "fork-ts-checker-webpack-plugin": "^1.5.0",
+        "lodash.debounce": "4.0.8",
+        "lost": "^8.3.0",
+        "node-sass": "^4.9.0",
+        "postcss-loader": "^2.1.5",
+        "sass-loader": "^7.0.1",
+        "svg-sprite-loader": "^3.7.3",
+        "ts-loader": "^6.2.0",
+        "typescript": "^3.6.3",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "webpack": "^3.11.0",
+        "webpack-bundle-analyzer": "^3.0.2",
+        "webpack-notifier": "^1.6.0"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "jquery": "^3.3.1",
+        "jquery-validation": "^1.18.0",
+        "smoothscroll-polyfill": "^0.4.3",
+        "url-loader": "^2.1.0",
+        "waypoints": "^4.0.1"
+    },
+    "scripts": {
+        "dev": "NODE_ENV=development ./node_modules/.bin/encore dev --progress --display normal",
+        "watch": "NODE_ENV=development ./node_modules/.bin/encore dev --watch --progress --display normal",
+        "prod": "NODE_ENV=production ./node_modules/.bin/encore production --progress --bail --display normal",
+        "stats": "NODE_ENV=production ./node_modules/.bin/encore production --progress --bail --display normal --json > webpack/stats.json && yarn run webpack-bundle-analyzer webpack/stats.json"
+    }
+}

@@ -1,0 +1,171 @@
+/**
+ *  Home page Style
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *  @author vcroteau
+ *
+ *  _TAB  Table of Contents
+ *  _GEN  General
+ */
+
+//===========/----------------------------------------------
+//  [_GEN]  /  General
+//=========/------------------------------------------------
+
+.content__limiter {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    width: 100%;
+
+    @include above(768px) {
+        width: 760px;
+        margin: 0 auto;
+    }
+}
+
+.title {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: $f-bold;
+    margin-bottom: 16px;
+
+    @include above($tablet-width) {
+        font-size: 35px;
+        line-height: 39px;
+    }
+
+    @include above($desktop-width) {
+        font-size: 60px;
+        line-height: 67px;
+    }
+
+    a {
+        color: $c-primary;
+        background: linear-gradient(to bottom, $c-primary 0%, $c-primary 100%);
+        background-position: 0 55px;
+        background-repeat: repeat-x;
+        background-size: 3px 3px;
+        text-decoration: none;
+        &:hover {
+            background-image: url("/static/images/svg/line.svg");
+            background-position: 0 53px;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+        }
+    }
+}
+
+.name {
+    margin-bottom: 40px;
+    font-family: $f-bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include above($tablet-width) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @include above($desktop-width) {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+}
+
+p {
+    font-family: $f-default;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 15px;
+
+    @include above($tablet-width) {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 25px;
+    }
+
+    @include above($desktop-width) {
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 32px;
+    }
+
+    .link {
+        color: $c-secondary;
+        font-family: $f-default;
+        background: linear-gradient(to bottom, $c-secondary 0%, $c-secondary 100%);
+        background-position: 0 26px;
+        padding-bottom: 15px;
+        background-repeat: repeat-x;
+        background-size: 2px 2px;
+        text-decoration: none;
+
+        @include above($tablet-width) {
+
+        }
+
+        @include above($desktop-width) {
+
+        }
+
+        &:hover {
+            background-image: url("/static/images/svg/line.svg");
+            background-position: 0 24px;
+            background-size: auto 4px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+
+            @include above($tablet-width) {
+
+            }
+
+            @include above($desktop-width) {
+
+            }
+        }
+    }
+
+    .cross-line {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            top: 55%;
+            transform: translateY(-50%);
+            background-color: $c-primary;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+    &__icon {
+        margin-right: 18px;
+        width: 24px;
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
