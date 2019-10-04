@@ -23,17 +23,6 @@
 }
 
 @font-face {
-    font-family: 'Brandon';
-    src: url('/static/fonts/Brandon/BrandonTextMedium.eot');
-    src: url('/static/fonts/Brandon/BrandonTextMedium.eot') format('embedded-opentype'),
-         url('/static/fonts/Brandon/BrandonTextMedium.woff2') format('woff2'),
-         url('/static/fonts/Brandon/BrandonTextMedium.woff') format('woff'),
-         url('/static/fonts/Brandon/BrandonTextMedium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "NeueMontreal";
     src: url('static/fonts/NeueMontreal-Regular.eot');
     src: url('static/fonts/NeueMontreal-Regular.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -46,7 +35,6 @@
 //  [_VAR]  /  Variables
 //=========/------------------------------------------------
 $f-fallback: "Helvetica", "Arial", sans-serif;
-$f-default: "Brandon", $f-fallback;
+$f-default: "NeueMontreal", $f-fallback;
 $f-bold: "PPWoodland", $f-fallback;
-$f-brandon: "Brandon", $f-fallback;
 

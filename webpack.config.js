@@ -72,6 +72,15 @@ Encore.addLoader({
     }
 });
 
+Encore.addLoader({
+    test: /\.svg/,
+    use: {
+        loader: 'svg-url-loader',
+        options: {}
+    }
+});
+
+
 /**
  * Image Loader
  */

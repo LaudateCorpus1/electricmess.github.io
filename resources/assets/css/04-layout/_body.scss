@@ -21,7 +21,7 @@ body {
     margin: 0;
     background-color: $c-background;
     border: 15px solid $c-border;
-    font-family: $f-brandon;
+    font-family: $f-default;
 
     @include above($tablet-width) {
         border: 25px solid $c-border;
