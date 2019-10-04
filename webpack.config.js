@@ -37,7 +37,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
  * Paths
  */
 Encore.setPublicPath('/');
-Encore.setOutputPath('./public/');
+Encore.setOutputPath('./');
 
 /**
  * Output Files
