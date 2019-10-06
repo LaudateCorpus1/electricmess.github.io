@@ -1,0 +1,96 @@
+/**
+ *  Pokemon go card
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *  @author vcroteau
+ *
+ *  _TAB  Table of Contents
+ *  _GEN  General
+ */
+
+//===========/----------------------------------------------
+//  [_GEN]  /  General
+//=========/------------------------------------------------
+
+.pogo {
+    &__card {
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $f-pogo;
+        background: white;
+        border: 3px solid pink;
+        border-radius: 5px;
+        padding: 15px;
+        opacity: 0;
+        transition: all 350ms ease-in-out;
+    }
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+
+        &.active {
+            .pogo__bg {
+                z-index: 2;
+                pointer-events: auto;
+            }
+            .pogo__card {
+                z-index: 3;
+                opacity: 1;
+                top: 50%;
+            }
+        }
+    }
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    &__name {
+        h3 {
+            color:#abb1b4;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            color: #1f8693;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__code {
+        h3 {
+            color:#abb1b4;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            color: #1f8693;
+            font-size: 34px;
+            font-weight: bold;
+        }
+    }
+}

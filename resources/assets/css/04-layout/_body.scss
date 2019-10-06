@@ -16,11 +16,11 @@ html {
 }
 
 body {
-    min-height: 100%;
-    padding: 15px;
+    min-height: 100vh;
+    padding: 20px;
     margin: 0;
     background-color: $c-background;
-    border: 15px solid $c-border;
+    border: 20px solid $c-border;
     font-family: $f-default;
 
     @include above($tablet-width) {

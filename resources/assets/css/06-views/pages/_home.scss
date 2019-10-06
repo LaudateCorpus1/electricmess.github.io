@@ -18,20 +18,27 @@
 //=========/------------------------------------------------
 
 .content__limiter {
-    padding-top: 50px;
-    padding-bottom: 50px;
     position: relative;
     width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
-    @include above(768px) {
-        width: 760px;
+    @include above(700px) {
+        width: 670px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @include above($desktop-width) {
+        width: 670px;
         margin: 0 auto;
     }
 }
 
 .title {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 32px;
+    line-height: 32px;
     font-family: $f-bold;
     margin-bottom: 16px;
 
@@ -48,33 +55,36 @@
     a {
         color: $c-primary;
         background: linear-gradient(to bottom, $c-primary 0%, $c-primary 100%);
-        background-position: 0 22px;
+        background-position: 0 31px;
         background-repeat: repeat-x;
         background-size: 3px 3px;
         text-decoration: none;
 
         @include above($tablet-width) {
-            background-position: 0 30px;
+            background-position: 0 33px;
         }
 
         @include above($desktop-width) {
-            background-position: 0 55px;
+            background-position: 0 57px;
         }
 
         &:hover {
-            background-position: 0 53px;
-            background-size: auto 6px;
-            background-repeat: repeat-x;
-            text-decoration: none;
+
+            @include above($desktop-width) {
+                background-position: 0 55px;
+                background-size: auto 6px;
+                background-repeat: repeat-x;
+                text-decoration: none;
+            }
         }
     }
 }
 
 .name {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-family: $f-bold;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 24px;
+    line-height: 32px;
 
     @include above($tablet-width) {
         font-size: 24px;
@@ -89,26 +99,25 @@
 
 p {
     font-family: $f-default;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 27px;
     margin-bottom: 15px;
 
     @include above($tablet-width) {
-        font-size: 18px;
-        line-height: 27px;
+
         margin-bottom: 25px;
     }
 
     @include above($desktop-width) {
-        font-size: 22px;
-        line-height: 33px;
+        font-size: 20px;
+        line-height: 30px;
         margin-bottom: 32px;
     }
 
     .link {
-        color: $c-secondary;
+        color: #7D83FF;
         font-family: $f-default;
-        background: linear-gradient(to bottom, $c-secondary 0%, $c-secondary 100%);
+        background: linear-gradient(to bottom, #7D83FF 0%, #7D83FF 100%);
         background-position: 0 20px;
         padding-bottom: 15px;
         background-repeat: repeat-x;
@@ -124,15 +133,12 @@ p {
         }
 
         &:hover {
-            background-position: 0 24px;
-            background-size: auto 4px;
-            background-repeat: repeat-x;
-            text-decoration: none;
-
-            @include above($tablet-width) {
-            }
 
             @include above($desktop-width) {
+                background-position: 0 24px;
+                background-size: auto 4px;
+                background-repeat: repeat-x;
+                text-decoration: none;
             }
         }
     }
@@ -171,7 +177,12 @@ p {
 .social {
     display: flex;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 8px;
+
+    @include above($tablet-width) {
+        padding-top: 24px;
+    }
+
 
     &__icon {
         margin-right: 18px;

@@ -74,9 +74,24 @@ export default class App {
     // Events
     //----------------------------------------------------------------------
 
-    addListeners() {}
+    addListeners() {
+        const openCardHandler = document.querySelector('.js-openCard');
+        const closeCardHandler = document.querySelector('.js-closeCard');
+
+        openCardHandler.addEventListener('click', this.openCard.bind(this));
+        closeCardHandler.addEventListener('click', this.closeCard.bind(this));
+    }
 
     //----------------------------------------------------------------------
     // Handler events
     //----------------------------------------------------------------------
+    closeCard(){
+        const pogoCard = document.querySelector('.pogo__wrapper');
+        pogoCard.classList.remove('active');
+    }
+
+    openCard(){
+        const pogoCard = document.querySelector('.pogo__wrapper');
+        pogoCard.classList.add('active');
+    }
 }

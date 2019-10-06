@@ -31,10 +31,14 @@
     url('static/fonts/NeueMontreal-Regular.ttf')  format('truetype')
 }
 
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
+
 //===========/----------------------------------------------
 //  [_VAR]  /  Variables
 //=========/------------------------------------------------
 $f-fallback: "Helvetica", "Arial", sans-serif;
 $f-default: "NeueMontreal", $f-fallback;
 $f-bold: "PPWoodland", $f-fallback;
+$f-pogo: "Lato", $f-fallback;
 
