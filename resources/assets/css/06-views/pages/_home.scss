@@ -34,6 +34,10 @@
         width: 670px;
         margin: 0 auto;
     }
+
+    @include above($l-desktop-width) {
+
+    }
 }
 
 .title {
@@ -41,25 +45,17 @@
     line-height: 32px;
     font-family: $f-bold;
     margin-bottom: 16px;
-    animation: ;
+    opacity: 0;
+    animation: fade-in 1s 0s ease-in-out forwards;
 
     @include above($tablet-width) {
-        font-size: 35px;
-        line-height: 39px;
+        font-size: 45px;
+        line-height: 53px;
     }
 
     @include above($desktop-width) {
         font-size: 60px;
         line-height: 67px;
-    }
-
-    @keyframes fade-in {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-20px);
-        }
     }
 
     a {
@@ -71,7 +67,7 @@
         text-decoration: none;
 
         @include above($tablet-width) {
-            background-position: 0 33px;
+            background-position: 0 36px;
         }
 
         @include above($desktop-width) {
@@ -91,14 +87,16 @@
 }
 
 .name {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-family: $f-bold;
     font-size: 24px;
     line-height: 32px;
+    opacity: 0;
+    animation: fade-in 1s 0ms ease-in-out forwards;
 
     @include above($tablet-width) {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 32px;
+        line-height: 38px;
     }
 
     @include above($desktop-width) {
@@ -112,6 +110,8 @@ p {
     font-size: 18px;
     line-height: 27px;
     margin-bottom: 15px;
+    opacity: 0;
+    animation: fade-in 1s 0ms ease-in-out forwards;
 
     @include above($tablet-width) {
 
@@ -188,11 +188,12 @@ p {
     display: flex;
     align-items: center;
     padding-top: 8px;
+    opacity: 0;
+    animation: fade-in 1s 0ms ease-in-out forwards;
 
-    @include above($tablet-width) {
+    @include above($desktop-width) {
         padding-top: 24px;
     }
-
 
     &__icon {
         margin-right: 18px;
@@ -205,5 +206,17 @@ p {
         &:last-child {
             margin-right: 0;
         }
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
