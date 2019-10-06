@@ -41,6 +41,7 @@
     line-height: 32px;
     font-family: $f-bold;
     margin-bottom: 16px;
+    animation: ;
 
     @include above($tablet-width) {
         font-size: 35px;
@@ -50,6 +51,15 @@
     @include above($desktop-width) {
         font-size: 60px;
         line-height: 67px;
+    }
+
+    @keyframes fade-in {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-20px);
+        }
     }
 
     a {
