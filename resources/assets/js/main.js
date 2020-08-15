@@ -21,8 +21,8 @@ const initApp = () => {
     const body = document.querySelector('body');
     const currentLang = html.lang;
     //const lang = document.querySelector('#lng').value;
-    const viewName = body.getAttribute('data-view');
-    const app = new App(viewName, currentLang);
+    //const viewName = body.getAttribute('data-view');
+    //const app = new App(viewName, currentLang);
 };
 
 document.addEventListener('DOMContentLoaded', initApp, false);

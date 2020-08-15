@@ -43,6 +43,8 @@
     "scripts": {
         "dev": "NODE_ENV=development ./node_modules/.bin/encore dev --progress --display normal",
         "watch": "NODE_ENV=development ./node_modules/.bin/encore dev --watch --progress --display normal",
+        "winWatch": "SET NODE_ENV=development && ./node_modules/.bin/encore dev --watch --progress --display normal",
+        "winProd": "SET NODE_ENV=production && ./node_modules/.bin/encore production --progress --bail --display normal",
         "prod": "NODE_ENV=production ./node_modules/.bin/encore production --progress --bail --display normal",
         "stats": "NODE_ENV=production ./node_modules/.bin/encore production --progress --bail --display normal --json > webpack/stats.json && yarn run webpack-bundle-analyzer webpack/stats.json"
     }

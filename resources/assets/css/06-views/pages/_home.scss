@@ -60,22 +60,14 @@
     a {
         color: $c-primary;
         background: linear-gradient(to bottom, $c-primary 0%, $c-primary 100%);
-        background-position: 0 31px;
+        background-position: 0 60%;
         background-repeat: repeat-x;
         background-size: 3px 3px;
-        text-decoration: none;
-
-        @include above($tablet-width) {
-            background-position: 0 36px;
-        }
-
-        @include above($desktop-width) {
-            background-position: 0 57px;
-        }
+        text-decoration: none;    
 
         &:hover {
             @include above($desktop-width) {
-                background-position: 0 55px;
+                background-position: 0 60%;
                 background-size: auto 6px;
                 background-repeat: repeat-x;
                 text-decoration: none;
