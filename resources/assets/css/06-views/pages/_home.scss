@@ -58,21 +58,55 @@
     }
 
     a {
-        color: $c-primary;
-        background: linear-gradient(to bottom, $c-primary 0%, $c-primary 100%);
-        background-position: 0 60%;
-        background-repeat: repeat-x;
-        background-size: 3px 3px;
-        text-decoration: none;    
+        color: $c-primary;;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
 
-        &:hover {
-            @include above($desktop-width) {
-                background-position: 0 60%;
-                background-size: auto 6px;
-                background-repeat: repeat-x;
-                text-decoration: none;
+        &::after {
+            content: "";
+            background: rgba(125,131,255,0.15);
+            position: absolute;
+            left: 11px;
+            bottom: 10px;
+            width: calc(100% - 8px);
+            height: calc(100% - 60px);
+            z-index: -1;
+            -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+            transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+
+             @include below($desktop-width) {
+                height: calc(100% - 40px);
+                bottom: 6px;
+            }
+
+            @include below($tablet-width) {
+                left: 13px;
+                bottom: 0px;
+                height: calc(100% - 20px);
             }
         }
+
+        &:hover:after {
+            left: 0;
+            bottom: 4px;
+            width: 100%;
+            height: 82%;
+          }
+        // background: linear-gradient(to bottom, $c-primary 0%, $c-primary 100%);
+        // background-position: 0 60%;
+        // background-repeat: repeat-x;
+        // background-size: 3px 3px;
+
+        // &:hover {
+        //     @include above($desktop-width) {
+        //         background-position: 0 60%;
+        //         background-size: auto 6px;
+        //         background-repeat: repeat-x;
+        //         text-decoration: none;
+        //     }
+        // }
+        
     }
 }
 
@@ -119,30 +153,66 @@ p {
 
     .link {
         color: #7d83ff;
-        font-family: $f-default;
-        background: linear-gradient(to bottom, #7d83ff 0%, #7d83ff 100%);
-        background-position: 0 20px;
-        padding-bottom: 15px;
-        background-repeat: repeat-x;
-        background-size: 2px 2px;
         text-decoration: none;
+        position: relative;
+        overflow: hidden;
 
-        @include above($tablet-width) {
-            background-position: 0 22px;
+        &::after {
+            content: "";
+            background: rgba(125,131,255,0.15);
+            position: absolute;
+            left: 12px;
+            bottom: -2px;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            z-index: -1;
+            -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+            transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+           
+            // @include below($desktop-width) {
+            //     height: calc(100% - 40px);
+            //     bottom: 6px;
+            // }
+
+            // @include below($tablet-width) {
+            //     left: 13px;
+            //     bottom: 0px;
+            //     height: calc(100% - 20px);
+            // }
+           
         }
 
-        @include above($desktop-width) {
-            background-position: 0 26px;
-        }
 
-        &:hover {
-            @include above($desktop-width) {
-                background-position: 0 24px;
-                background-size: auto 4px;
-                background-repeat: repeat-x;
-                text-decoration: none;
-            }
-        }
+        &:hover:after {
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+          }
+        // font-family: $f-default;
+        // background: linear-gradient(to bottom, #7d83ff 0%, #7d83ff 100%);
+        // background-position: 0 20px;
+        // padding-bottom: 15px;
+        // background-repeat: repeat-x;
+        // background-size: 2px 2px;
+        // text-decoration: none;
+
+        // @include above($tablet-width) {
+        //     background-position: 0 22px;
+        // }
+
+        // @include above($desktop-width) {
+        //     background-position: 0 26px;
+        // }
+
+        // &:hover {
+        //     @include above($desktop-width) {
+        //         background-position: 0 24px;
+        //         background-size: auto 4px;
+        //         background-repeat: repeat-x;
+        //         text-decoration: none;
+        //     }
+        // }
     }
 
     .squiggle {
