@@ -24,19 +24,12 @@
     padding-bottom: 16px;
 
     @include above(700px) {
-        width: 620px;
+        width: 570px;
         margin: 0 auto;
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    @include above($desktop-width) {
-        width: 620px;
-        margin: 0 auto;
-    }
-
-    @include above($l-desktop-width) {
-    }
 }
 
 .title {
@@ -70,13 +63,12 @@
             left: 11px;
             bottom: 10px;
             width: calc(100% - 8px);
-            height: calc(100% - 60px);
+            height: calc(100% - 40px);
             z-index: -1;
             -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
             transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
 
              @include below($desktop-width) {
-                height: calc(100% - 40px);
                 bottom: 6px;
             }
 
