@@ -1,0 +1,59 @@
+/**
+ *  Main SASS Variables
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *
+ *  _TAB  Table of Contents
+ *  _GRD  Grid
+ *  _COL  Colors
+ *  _SIZ  Sizes
+ *  _ZID  Z-index
+ *  _TRS  Transitions
+ */
+
+
+//===========/----------------------------------------------
+//  [_GRD]  /  Grid
+//=========/------------------------------------------------
+$xxxl-desktop-width: 2560px;
+$xxl-desktop-width: 1920px;
+$xl-desktop-width: 1680px;
+$l-desktop-width: 1441px;
+$desktop-width: 1280px;
+$tablet-width:  1025px;
+$mobile-width:  768px;
+$small-width: 580px;
+$min-width: 320px;
+
+$site-max-width: 1160px;
+
+ //===========/----------------------------------------------
+//  [_COL]  /  Z-index
+//=========/------------------------------------------------
+$c-accent1: #564ef6;
+$c-accent2: #e9c263;
+$c-accent3: #C8B500;
+$c-accent4: #65A76E;
+$c-accent5: #00A9B9;
+
+$c-white: #ffffff;
+$c-black: #000;
+$c-dark: #262A32;
+$c-darker: #15191D;
+$c-success: #65A76E;
+
+$c-backround-cutoff: #111211;
+
+$c-backround: $c-accent1;
+$c-loading-backround: #9575cd;
+$c-loading-backround-2: #665ef6;
+
+//===========/----------------------------------------------
+//  [_ZID]  /  Z-index
+//=========/------------------------------------------------
+$z-loading: 2;

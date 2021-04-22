@@ -1,0 +1,65 @@
+/**
+ *  Main Body style
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *
+ *  _TAB  Table of Contents
+ *  _GEN Generic
+ *  _CON Container
+ */
+
+
+//===========/----------------------------------------------
+//  [_GEN]  /  Generic
+//=========/------------------------------------------------
+html, body {
+    height: 100%;
+	scroll-behavior: smooth;
+    background: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0 !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    font-size: percentage($base-font-size / 16px);
+    font-weight: 400;
+    font-family: $f-default;
+    overflow-x: hidden;
+    background-size: cover;
+    text-align: center;
+    background-color: $c-backround-cutoff;
+    color: $c-white;
+    height: 100%;
+    position: relative;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+main {
+    position: relative;
+}
+
+//===========/----------------------------------------------
+//  [_MED]  /  Medias
+//=========/------------------------------------------------
+img {
+    max-width: 100%;
+    width: auto;
+}

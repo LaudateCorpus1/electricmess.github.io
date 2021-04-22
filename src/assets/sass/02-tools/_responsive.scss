@@ -1,0 +1,36 @@
+/**
+ *  Responsive Mixin
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *
+ *  _TAB  Table of Contents
+ *  _MIX  Mixins
+ */
+
+
+//===========/----------------------------------------------
+//  [_MIX]  /  Mixins
+//=========/------------------------------------------------
+    
+@mixin below($size) {
+    @media (max-width: $size - 1px) {
+        @content;
+    }
+}
+
+@mixin above($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin between($min, $max) {
+    @media (min-width: $min) and (max-width: $max - 1px) {
+        @content;
+    }
+}
