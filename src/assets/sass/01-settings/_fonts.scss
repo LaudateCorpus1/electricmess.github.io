@@ -14,14 +14,25 @@
  */
 
 
- @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ @font-face {
+    font-family: "NeueMontreal";
+    src: url("../../fonts/NeueMontreal-Regular.woff2") format("woff2"),
+         url("../../fonts/NeueMontreal-Regular.woff") format("woff");
+} 
+
+@font-face {
+    font-family: "PPWoodland-Bold";
+    src: url("../../fonts/PPWoodland-Bold.woff2") format("woff2"),
+         url("../../fonts/PPWoodland-Bold.woff") format("woff");
+}
 
 //===========/----------------------------------------------
 //  [_VAR]  /  Variables
 //=========/------------------------------------------------
 
 $f-fallback: Arial, sans-serif;
-$f-default: "Heebo", $f-fallback;
+$f-default: "NeueMontreal", $f-fallback;
+$f-bold: "PPWoodland-Bold", $f-fallback;
 
 //===========/----------------------------------------------
 //  [_SIZ]  /  Font Sizes
