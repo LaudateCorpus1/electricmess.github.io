@@ -1,0 +1,131 @@
+/**
+ *  beerCard style
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *  _TAB  Table of Contents
+ *  _GEN Generic
+ */
+
+//===========/----------------------------------------------
+//  [_GEN]  /  Generic
+//=========/------------------------------------------------
+
+.intro {
+	min-height: 100vh;
+	text-align: left;
+	position: relative;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $c-backround-intro;
+
+	&__title {
+		font-size: 4.25em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent1;
+		margin-bottom: 120px;
+		position: relative;
+		span {
+			display: inline-block;
+			transform-origin: 0 0;
+		}		
+	}
+
+	&__mask {
+		overflow: hidden;
+		position: relative;
+		&:nth-child(1n) span{			
+			animation-delay: 0.5s;
+		}
+		&:nth-child(2n) span{
+			animation-delay: 1s;
+		}
+		&:nth-child(3n) span{
+			animation-delay: 1.5s;
+		}
+	}
+
+	&__text {
+		position: relative;
+		animation: maskMove 1s forwards;
+		animation-duration: 1s;
+		transform: translateY(100%) rotate(5deg);
+	}
+
+	@keyframes maskMove {
+		0% {
+			transform: translateY(100%) rotate(5deg);
+		}
+		100% {
+			transform: translateY(0) rotate(0);
+		}
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 44px;
+		font-family: $f-default;
+		color: $c-accent1;
+	}
+}
+
+.half {
+	padding: 200px 0;
+	.content-wrapper {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	&__title {
+		width: 50%;
+	}
+
+	&__content {
+		width: 50%;
+		p {
+			font-size: 32px;
+			line-height: 44px;
+			font-family: $f-default;
+			color: $c-accent2;
+			margin-bottom: 40px;
+		}
+
+		ul {
+			li {
+				font-size: 32px;
+				line-height: 44px;
+				font-family: $f-default;
+				color: $c-accent2;
+				margin-bottom: 15px;
+				padding-left: 37px;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 50%;
+					width: 15px;
+					height: 15px;
+					transform: translateY(-50%);
+					border: 2px solid $c-accent1;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+	h3 {
+		font-size: 68px;
+		line-height: 82px;
+		font-family: $f-bold;
+		color: $c-accent2;
+	}
+}

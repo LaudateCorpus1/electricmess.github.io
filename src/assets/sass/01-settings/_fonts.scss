@@ -12,7 +12,7 @@
  *  _VAR    Variables
  *  _SIZ    Font Sizes
  */
-
+ @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 
  @font-face {
     font-family: "NeueMontreal";
@@ -26,13 +26,19 @@
          url("../../fonts/PPWoodland-Bold.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Agrandir-GrandHeavy";
+    src: url("../../fonts/Agrandir-GrandHeavy.woff2") format("woff2"),
+         url("../../fonts/Agrandir-GrandHeavy.woff") format("woff");
+}
+
 //===========/----------------------------------------------
 //  [_VAR]  /  Variables
 //=========/------------------------------------------------
 
 $f-fallback: Arial, sans-serif;
-$f-default: "NeueMontreal", $f-fallback;
-$f-bold: "PPWoodland-Bold", $f-fallback;
+$f-default: "Work Sans", $f-fallback;
+$f-bold: "Agrandir-GrandHeavy", $f-fallback;
 
 //===========/----------------------------------------------
 //  [_SIZ]  /  Font Sizes

@@ -10,7 +10,6 @@
  *
  *  _TAB  Table of Contents
  *  _GEN Generic
- *  _CON Container
  */
 
 
@@ -20,12 +19,16 @@
 html, body {
     height: 100%;
 	scroll-behavior: smooth;
-    background: #000;
+    background: #E5E5E5;
 }
 
 html {
     scroll-behavior: smooth;
     margin: 0 !important;
+
+	@media screen and (max-width: 1600px) {
+		font-size: calc(6px + (16 - 6) * ((100vw - 320px) / (1600 - 320)));
+	}
 }
 
 body {
@@ -41,8 +44,8 @@ body {
     font-family: $f-default;
     overflow-x: hidden;
     background-size: cover;
-    text-align: center;
-    background-color: $c-backround-cutoff;
+    text-align: left;
+    background-color: $c-backround;
     color: $c-white;
     height: 100%;
     position: relative;
@@ -50,10 +53,28 @@ body {
     &.noscroll {
         overflow: hidden;
     }
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		height: 0.5em;
+		background: $c-backround;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $c-accent1;
+		border-radius: 3px;
+		// border: 2px solid  $c-accent2;
+	}
 }
 
 main {
     position: relative;
+}
+
+.content-wrapper {
+	max-width: 1540px;
+	padding: 0 50px;
+	margin: 0 auto;
 }
 
 //===========/----------------------------------------------

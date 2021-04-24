@@ -1,75 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useRef } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+import Home from './components/Home';
+import Project1 from './components/Project1';
+import Project2 from './components/Project2';
+import Project3 from './components/Project3';
+import Project4 from './components/Project4';
+import Project5 from './components/Project5';
+import { ROUTES } from './Constants.js';
+
 import './assets/sass/styles.scss';
 
 function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<span>Logo</span>		
-				<span>Menu</span>
-			</header>
-			<div className="main-view">
+	const containerRef = useRef(null);
 
-				<div className="main-block">
-					<h1>
-					Bonjour, hi 
-						<br />
-					Je m’appelle Alexia. Amoureuse des détails et des expériences peaufinées, j’ai passé les 8 dernières années à explorer plusieurs facettes du design numérique. 
-					</h1>
-					<h2>
-						J’ai aussi bingé beaucoup d’animes, bu au moins 5800 lattés et tué quelques plantes malgré tous mes efforts.	
-					</h2>	
-				</div>
+	return (		
 
-				<div className="main-block half">
-					<h3>
-						At the moment
-					</h3>
-					<div>
-						<p>
-							I currently work as a UI/UX designer for Nexus Innovations. 
-						</p>
-						<p>							
-							Je fais aussi partie de l’équipe de Montréal Interactive, une communauté locale de design existant depuis 4 ans. Durant ce temps pandémique, nous somme surtout actif·ve·s sur Discord.
-						</p>
-					</div>	
-				</div>
-				<div className="main-block half">
-					<h3>
-						What I enjoy doing the most
-					</h3>
-					<div>
-						<ul>
-							<li>
-								Design d’interfaces
-							</li>
-							<li>
-								Micro intéractions
-							</li>
-							<li>
-								Prototypes
-							</li>
-							<li>
-								Systèmes de design
-							</li>
-							<li>
-								Illustration
-							</li>
-							<li>
-								Identité de marque
-							</li>
-							<li>
-								Assurance qualité
-							</li>
-							<li>
-								Collaborate with people
-							</li>
-						</ul>
-					</div>	
-				</div>
-			</div>
-		</div> 
+		<LocomotiveScrollProvider
+			options={
+				{
+					smooth: true,
+					// ... all available Locomotive Scroll instance options 
+				}
+			}
+			watch={
+				[
+					//...all the dependencies you want to watch to update the scroll
+				]
+			}
+			containerRef={containerRef}
+		>
+			<div data-scroll-container ref={containerRef}>
+				<Router>
+					<header className="header">
+						<span>Logo</span>		
+						<span>Menu</span>
+					</header>
+					<Switch>
+						<Route path="/">
+							<Home />
+						</Route>
+
+						<Route path={ROUTES.project1}>
+							<Project1 />
+						</Route>
+
+						<Route path={ROUTES.project2}>
+							<Project2 />
+						</Route>
+
+						<Route path={ROUTES.project3}>
+							<Project3 />
+						</Route>
+
+						<Route path={ROUTES.project4}>
+							<Project4 />
+						</Route>
+
+						<Route path={ROUTES.project5}>
+							<Project5 />
+						</Route>
+					</Switch>
+				</Router>
+			</div>			
+		</LocomotiveScrollProvider>
 	);
 }
 
