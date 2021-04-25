@@ -81,6 +81,8 @@ main {
 	text-decoration: none;
 	position: relative;
 	color: $c-accent3;
+	
+	font-family: $f-default;
 	svg path{
 		fill: $c-accent3;
 	}

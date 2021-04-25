@@ -30,7 +30,7 @@
 		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent1;
-		margin-bottom: 120px;
+		margin-bottom: 32px;
 		position: relative;
 		span {
 			display: inline-block;
@@ -74,6 +74,7 @@
 		font-family: $f-default;
 		color: $c-accent1;
 		opacity: 0;
+		max-width: 75%;
 		position: relative;
 		transform: translateY(50px);
 		animation: introFadeUp 750ms 2.5s forwards;
@@ -155,8 +156,8 @@
 	&__content {
 		width: 50%;
 		p {
-			font-size: 32px;
-			line-height: 44px;
+			font-size: 2em;
+			line-height:  1.2em;
 			font-family: $f-default;
 			color: $c-accent2;
 			margin-bottom: 40px;
@@ -164,8 +165,8 @@
 
 		ul {
 			li {
-				font-size: 32px;
-				line-height: 44px;
+				font-size: 2em;
+				line-height: 1.2em;
 				font-family: $f-default;
 				color: $c-accent2;
 				margin-bottom: 15px;
@@ -216,6 +217,9 @@
 .projects {
 	&__block {
 		text-decoration: none;
+		&:hover {
+			cursor: url('../../images/cursor.svg'), auto;
+		}
 
 		h3 {
 			font-size: 4.15em;
@@ -239,6 +243,14 @@
 			text-align: right;
 		}
 	}
+
+	.externalLinks {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 2em;
+		line-height: 1.2em;
+	}
 }
 
 
@@ -247,7 +259,10 @@
 	text-align: center;
 
 	h2 {
-
+		font-size: 3.5em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent2;
 	}
 
 	p {
@@ -257,5 +272,90 @@
 		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent2;
+	}
+}
+
+.playground {
+	// margin-bottom: 100vh;
+}
+.contact__block {
+	padding: 200px 0px;
+	// position: fixed;
+	background-color: $c-backround-intro;
+	z-index: -1;
+
+	h2 {
+		color: $c-accent3;
+		font-size:  3.5em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		max-width: 640px;
+		text-align: center;
+		margin: 0 auto 40px;
+	}
+	.contactPromp {
+		text-align: center;
+		margin: 80px auto 140px;
+		max-width: 690px;
+		font-size: 2em;
+		line-height: 1.2em;
+		font-family: $f-default;
+		color: $c-accent3;
+		a {
+			color: $c-accent3;
+		}
+	}
+}
+
+.separator {
+}
+
+.formBlock {
+	display: flex;
+	justify-content: center;
+	&:hover {
+		cursor: url('../../images/pencil.svg'), auto;
+	}
+
+	canvas {
+		border: 2px solid $c-accent2;
+	}
+
+	div {
+		&:first-child {
+			margin-right: 67px;
+		}
+		span {
+			display: block;
+			text-align: center;
+			font-size: 2em;
+			line-height: 1.2em;
+			font-family: $f-default;
+			color: $c-accent2;
+		}
+	}
+}
+
+.socials {
+	text-align: center;
+	h3 {
+		padding: 80px 0 32px;
+		font-size: 2em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent3;
+
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		a {
+			border-radius: 50%;
+			border: 1px solid transparent;
+
+			&:hover {
+				border: 1px solid $c-accent3;
+			}
+		}
 	}
 }

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+// import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Home from './components/Home';
 import Project1 from './components/Project1';
 import Project2 from './components/Project2';
