@@ -27,17 +27,23 @@
 }
 
 @font-face {
+    font-family: "PPWoodland-Regular";
+    src: url("../../fonts/PPWoodland-Regular.woff2") format("woff2"),
+         url("../../fonts/PPWoodland-Regular.woff") format("woff");
+}
+
+@font-face {
     font-family: "Agrandir-GrandHeavy";
     src: url("../../fonts/Agrandir-GrandHeavy.woff2") format("woff2"),
          url("../../fonts/Agrandir-GrandHeavy.woff") format("woff");
 }
-
+ 
 //===========/----------------------------------------------
 //  [_VAR]  /  Variables
 //=========/------------------------------------------------
 
 $f-fallback: Arial, sans-serif;
-$f-default: "Work Sans", $f-fallback;
+$f-default: "PPWoodland-Regular", $f-fallback;
 $f-bold: "Agrandir-GrandHeavy", $f-fallback;
 
 //===========/----------------------------------------------

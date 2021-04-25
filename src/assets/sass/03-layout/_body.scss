@@ -61,7 +61,7 @@ body {
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: $c-accent1;
+		background-color: $c-accent3;
 		border-radius: 3px;
 		// border: 2px solid  $c-accent2;
 	}
@@ -72,9 +72,18 @@ main {
 }
 
 .content-wrapper {
-	max-width: 1540px;
+	max-width: 1474px;
 	padding: 0 50px;
 	margin: 0 auto;
+}
+
+.externalLinks {
+	text-decoration: none;
+	position: relative;
+	color: $c-accent3;
+	svg path{
+		fill: $c-accent3;
+	}
 }
 
 //===========/----------------------------------------------

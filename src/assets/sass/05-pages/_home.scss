@@ -23,10 +23,10 @@
 	width: 100%;
 	flex-direction: column;
 	justify-content: center;
-	background-color: $c-backround-intro;
+	background-image: url('../../images/bg-intro.jpg');
 
 	&__title {
-		font-size: 4.25em;
+		font-size: 4.15em;
 		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent1;
@@ -69,10 +69,74 @@
 	}
 
 	h2 {
-		font-size: 32px;
-		line-height: 44px;
+		font-size: 2em;
+		line-height: 1.2em;
 		font-family: $f-default;
 		color: $c-accent1;
+		opacity: 0;
+		position: relative;
+		transform: translateY(50px);
+		animation: introFadeUp 750ms 2.5s forwards;
+	}
+
+	@keyframes introFadeUp {
+		from {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		to {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+
+	.arrowDown {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		opacity: 0;
+		transform: translateX(-50%);
+		animation: arrowDown 750ms 3s forwards, upDown 1s 3.5s ease-in-out alternate infinite;
+	}
+	
+
+	@keyframes arrowDown {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes upDown {
+		from {
+			bottom: 0;
+		}
+		to {
+			bottom: 15px;
+		}
+	}
+
+	.circleDown {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		svg path {
+			stroke-dasharray: 1000;
+			stroke-dashoffset: -1000;
+			animation: circleDown 1.5s  2s ease-in-out forwards;
+		}
+	} 
+
+	@keyframes circleDown {
+		from {
+			stroke-dashoffset: -1000;
+		}
+		to {
+			stroke-dashoffset: 0;
+		}
 	}
 }
 
@@ -123,8 +187,74 @@
 	}
 
 	h3 {
-		font-size: 68px;
-		line-height: 82px;
+		font-size: 4.15em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent2;
+	}
+}
+
+.scroll-separator h2 {
+	text-transform:uppercase;
+	display: inline-block;
+	white-space: nowrap;
+	animation: floatText 20s infinite linear;
+	padding-left: 100%; /*Initial offset, which places the text off-screen*/
+	font-size: 10.15em;
+	line-height: 1.2em;
+	font-family: $f-bold;
+	color: $c-accent1;
+	opacity: 0.5;
+
+	@keyframes floatText {
+		to {
+			transform: translateX(-100%);
+		}
+	}
+}
+
+.projects {
+	&__block {
+		text-decoration: none;
+
+		h3 {
+			font-size: 4.15em;
+			line-height: 1.2em;
+			font-family: $f-bold;
+			color: $c-accent2;
+		}
+
+		h4 {
+			font-size: 2.5em;
+			line-height: 1.2em;
+			font-family: $f-default;
+			color: $c-accent2;
+		}
+
+		&--title {
+			position: absolute;
+			right: 0;
+			bottom: 50px;
+			transform: translateX(-50%);
+			text-align: right;
+		}
+	}
+}
+
+
+.centered {
+
+	text-align: center;
+
+	h2 {
+
+	}
+
+	p {
+		max-width: 750px;
+		margin: 0 auto;
+		font-size: 2em;
+		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent2;
 	}

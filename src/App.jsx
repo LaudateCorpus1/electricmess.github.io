@@ -32,14 +32,11 @@ function App() {
 		>
 			<div data-scroll-container ref={containerRef}>
 				<Router>
-					<header className="header">
+					<header data-scroll-section className="header">
 						<span>Logo</span>		
 						<span>Menu</span>
 					</header>
-					<Switch>
-						<Route path="/">
-							<Home />
-						</Route>
+					<Switch>					
 
 						<Route path={ROUTES.project1}>
 							<Project1 />
@@ -59,6 +56,10 @@ function App() {
 
 						<Route path={ROUTES.project5}>
 							<Project5 />
+						</Route>
+
+						<Route path="/">
+							<Home />
 						</Route>
 					</Switch>
 				</Router>
