@@ -134,7 +134,7 @@ function Home() {
 				</a>
 			</div>
 
-			<div data-scroll-section className="main-block centered">
+			<div data-scroll-section className="main-block sideHustle">
 				<h2>Side Hustle</h2>
 				<p>En dehors des heures de travail, j&apos;explore en illustration. Welcome to my playground</p>
 			</div>
@@ -144,7 +144,7 @@ function Home() {
 			</div>
 
 			<div data-scroll-section className="main-block playground" />
-			
+
 			<div data-scroll-section className="contact__block">
 				<div className="content-wrapper">
 					<h2>Veux tu sortir avec moi</h2>
