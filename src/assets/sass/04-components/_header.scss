@@ -17,6 +17,18 @@
 
 .header {
 	position: absolute;
-
-
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 41px;
+	z-index: 50;
+	nav {
+		span {
+			font-size: 1.5em;
+			line-height: 1.2em;
+			color: $c-accent3;
+			font-family: $f-default;
+			margin-left: 40px;
+		}
+	}
 }

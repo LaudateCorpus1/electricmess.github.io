@@ -161,30 +161,7 @@
 			font-family: $f-default;
 			color: $c-accent2;
 			margin-bottom: 40px;
-		}
-
-		ul {
-			li {
-				font-size: 2em;
-				line-height: 1.2em;
-				font-family: $f-default;
-				color: $c-accent2;
-				margin-bottom: 15px;
-				padding-left: 37px;
-				position: relative;
-				&::before {
-					content: "";
-					position: absolute;
-					left: 0;
-					top: 50%;
-					width: 15px;
-					height: 15px;
-					transform: translateY(-50%);
-					border: 2px solid $c-accent1;
-					border-radius: 50%;
-				}
-			}
-		}
+		}		
 	}
 
 	h3 {
@@ -215,9 +192,11 @@
 }
 
 .projects {
+	margin-top: -100px;
 	&__block {
 		text-decoration: none;
 		position: relative;
+		margin-bottom: 280px;
 		&:hover {
 			cursor: url('../../images/cursor.svg'), auto;
 		}

@@ -1,20 +1,38 @@
 import React, { useRef } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useHistory } from 'react-router';
 import { ROUTES } from '../Constants';
 import ElliotJaxIntro from '../assets/images/projects/elliot-jax-intro.jpg';
+import NetMathIntro from '../assets/images/projects/netmath-intro.jpg';
 import linkedin from '../assets/images/LinkedIn.svg';
+
+import { loadPage, showLoader } from '../helper/loader';
 
 
 function Home() {
 
-	function goToPage(route) {
+	const { scroll } = useLocomotiveScroll();
+	if (scroll) {
+		scroll.scrollTo(0, 0);
+	}
 
+	const history = useHistory();
+	loadPage('.homepage');
+	function goToPage(route) {		
+		showLoader();	
+		setTimeout(() => {
+			history.push({
+				pathname: route,
+				state: {},
+			});
+		}, 1000); 
 	}
 
 	return (
-		<>
-			<div className="main-block intro" data-scroll-section>
+		<div className="homepage" data-scroll-section>
+			<div className="main-block intro">
 				<div className="content-wrapper">
 					<div className="intro__content">
 						{/* TODO FIX TIMING */}
@@ -45,7 +63,7 @@ function Home() {
 				</i>
 			</div>
 
-			<div data-scroll-section className="main-block half">
+			<div className="main-block half">
 				<div className="content-wrapper">
 					<h3 className="half__title">
 						At the
@@ -75,7 +93,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div data-scroll-section className="main-block half">
+			<div className="main-block half">
 				<div className="content-wrapper">
 					<h3 className="half__title">
 						What I enjoy
@@ -83,7 +101,7 @@ function Home() {
 					doing the most
 					</h3>
 					<div className="half__content">
-						<ul>
+						<ul className="list">
 							<li>
 								Design d’interfaces
 							</li>
@@ -112,10 +130,10 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div data-scroll-section className="main-block scroll-separator">
+			<div className="main-block scroll-separator">
 				<h2>Projects I worked on</h2>
 			</div>
-			<div data-scroll-section className="main-block projects">
+			<div className="main-block projects">
 				<div className="content-wrapper">
 					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
 						<img src={ElliotJaxIntro} alt="Elliot Jax" />
@@ -123,6 +141,15 @@ function Home() {
 						<div className="projects__block--title">
 							<h3>Elliot Jaxx</h3>
 							<h4>Site Web</h4>
+						</div>
+					</div>
+
+					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
+						<img src={NetMathIntro} alt="NetMath" />
+						{/* TODO paralax in title */}
+						<div className="projects__block--title">
+							<h3>Nethmath</h3>
+							<h4>Application Web</h4>
 						</div>
 					</div>
 				</div>
@@ -134,18 +161,18 @@ function Home() {
 				</a>
 			</div>
 
-			<div data-scroll-section className="main-block sideHustle">
+			<div className="main-block sideHustle">
 				<h2>Side Hustle</h2>
 				<p>En dehors des heures de travail, j&apos;explore en illustration. Welcome to my playground</p>
 			</div>
 
-			<div data-scroll-section className="main-block scroll-separator">
+			<div className="main-block scroll-separator">
 				<h2>my playground</h2>
 			</div>
 
-			<div data-scroll-section className="main-block playground" />
+			<div className="main-block playground" />
 
-			<div data-scroll-section className="contact__block">
+			<div className="contact__block">
 				<div className="content-wrapper">
 					<h2>Veux tu sortir avec moi</h2>
 					<div className="formBlock">
@@ -204,7 +231,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 
 	);
 }

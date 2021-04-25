@@ -1,0 +1,46 @@
+/**
+ *  Header style
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *  _TAB  Table of Contents
+ *  _GEN Generic
+ */
+
+//===========/----------------------------------------------
+//  [_GEN]  /  Generic
+//=========/------------------------------------------------
+
+.page-loader {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: $c-backround;
+	display: block;
+	z-index: 99999999;
+	transition: all 0.4s cubic-bezier(.86,0,.07,1), background-color 1000ms linear;
+	top: 0vh;
+}
+
+.page-loader-percentage {
+	position: absolute;
+	width: 200px;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0,0,0,0.2);
+	height: 3px;
+
+	&-bar {
+	position: absolute;
+	background: $c-accent3;
+	height: 3px;
+	max-width: 200px;
+	transition: 0.5s;
+	}
+
+}

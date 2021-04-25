@@ -1,0 +1,130 @@
+/**
+ *  Main Body style
+ *
+ */
+
+//===========/----------------------------------------------
+//  [_TAB]  /  Table of Contents
+//=========/------------------------------------------------
+/**
+ *
+ *  _TAB  Table of Contents
+ *  _GEN Generic
+ */
+
+
+//===========/----------------------------------------------
+//  [_GEN]  /  Generic
+//=========/------------------------------------------------
+.project {
+	padding: 200px 0;
+	position: relative;
+	h1 {
+		font-size: 4.15em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent1;
+		margin-bottom: 41px;
+	}
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		&--left {
+			max-width: 920px;
+			padding-right: 220px;
+			
+
+			h2 {
+				font-size: 2em;
+				line-height: 1.2em;
+				font-family: $f-default;
+				color: $c-accent2;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
+
+			p {
+				font-size: 2em;
+				line-height: 1.2em;
+				font-family: $f-default;
+				color: $c-accent2;
+				margin-bottom: 32px;
+			}
+
+			a {
+				display: block;
+				font-size: 2em;
+				line-height: 1.2em;
+				font-family: $f-default;
+				color: $c-accent3;
+			}
+		}
+		&--right {
+			h2 {
+				font-size: 2em;
+				line-height: 1.2em;
+				font-family: $f-default;
+				color: $c-accent2;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__colorBG {
+		position: relative;
+		padding: 400px 0px;
+		text-align: center;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 800px;
+			top: 0;
+			left: 0;
+		}
+
+		.computer {
+		}
+		.gif {
+		}
+
+		&--1 {
+			&:before {
+				background-color: #292929;
+			}
+		}
+
+		&--2 {
+			background-color: #292929;
+		}
+
+		&--3 {
+			background-color: #292929;
+		}
+
+		&--4 {
+			background-color: #292929;
+		}
+
+		&--5 {
+			background-color: #292929;
+		}
+	}
+
+	&__image {
+		margin: 200px 0;
+		&--golden {
+			background-color: #D1B16C;
+		}
+		&--black {
+			background-color: #292929;
+		}
+		img {
+			display: block;
+			// max-width: 1374px;
+			margin: 0 auto;
+		}
+	}
+}

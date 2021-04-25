@@ -95,3 +95,27 @@ img {
     max-width: 100%;
     width: auto;
 }
+
+
+ul {
+	li {
+		font-size: 2em;
+		line-height: 1.2em;
+		font-family: $f-default;
+		color: $c-accent2;
+		margin-bottom: 15px;
+		padding-left: 37px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 15px;
+			height: 15px;
+			transform: translateY(-50%);
+			border: 2px solid $c-accent1;
+			border-radius: 50%;
+		}
+	}
+}
