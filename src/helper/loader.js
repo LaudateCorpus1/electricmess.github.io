@@ -18,15 +18,21 @@ export function loadPage(selector, callback) {
 		console.log('isloaded');
 
 		setTimeout(() => {
-			document.getElementById('loadingPercentageBar').style.width = '100%';
-			
+			const loaderBar = document.getElementById('loadingPercentageBar');
+			if (loaderBar) {
+				loaderBar.style.width = '100%';
+			}
+						
 			setTimeout(() => {
 				document.documentElement.scrollTop = 0;
 				const loader = document.getElementById('loader');
-				loader.style.top = '-100vh';
-				loader.style.transitionDuration = '0.4s';
-				document.getElementById('loadingPercentageBar').style.width = '0%';
-
+				if (loader) {
+					loader.style.top = '-100vh';
+					loader.style.transitionDuration = '0.4s';
+				}
+				if (loaderBar) {
+					loaderBar.style.width = '0%';
+				}
 			}, 1500); 
 		}, 1500);
 	};
