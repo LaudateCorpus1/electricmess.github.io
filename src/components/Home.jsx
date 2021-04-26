@@ -3,9 +3,14 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useHistory } from 'react-router';
+import { fabric } from 'fabric';
+
 import { ROUTES } from '../Constants';
 import ElliotJaxIntro from '../assets/images/projects/elliot-jax-intro.jpg';
 import NetMathIntro from '../assets/images/projects/netmath-intro.jpg';
+import MtlIntIntro from '../assets/images/projects/mtl-int-intro.jpg';
+import GravIntro from '../assets/images/projects/grav-intro.jpg';
+import ShareIntro from '../assets/images/projects/share-intro.jpg';
 import linkedin from '../assets/images/LinkedIn.svg';
 
 import { loadPage, showLoader } from '../helper/loader';
@@ -20,15 +25,20 @@ function Home() {
 
 	const history = useHistory();
 	loadPage('.homepage');
-	function goToPage(route) {		
-		showLoader();	
+	function goToPage(route) {
+		showLoader();
 		setTimeout(() => {
 			history.push({
 				pathname: route,
 				state: {},
 			});
-		}, 1000); 
+		}, 1000);
 	}
+
+	const canvas = new fabric.Canvas('sheet');
+	canvas.isDrawingMode = true;
+	canvas.freeDrawingBrush.width = 5;
+	canvas.freeDrawingBrush.color = '#292929';
 
 	return (
 		<div className="homepage" data-scroll-section>
@@ -144,7 +154,7 @@ function Home() {
 						</div>
 					</div>
 
-					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
+					<div onClick={() => goToPage(ROUTES.project2)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project2)} className="projects__block">
 						<img src={NetMathIntro} alt="NetMath" />
 						{/* TODO paralax in title */}
 						<div className="projects__block--title">
@@ -152,13 +162,44 @@ function Home() {
 							<h4>Application Web</h4>
 						</div>
 					</div>
+
+					<div onClick={() => goToPage(ROUTES.project3)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project3)} className="projects__block">
+						<img src={MtlIntIntro} alt="Montréal Interactive" />
+						{/* TODO paralax in title */}
+						<div className="projects__block--title">
+							<h3>
+								Montréal
+								<br />
+								Interactive
+							</h3>
+							<h4>Direction artistique</h4>
+						</div>
+					</div>
+
+					<div onClick={() => goToPage(ROUTES.project4)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project4)} className="projects__block">
+						<img src={GravIntro} alt="Gravi-t" />
+						{/* TODO paralax in title */}
+						<div className="projects__block--title">
+							<h3>Gravi-t</h3>
+							<h4>Logo</h4>
+						</div>
+					</div>
+
+					<div onClick={() => goToPage(ROUTES.project5)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project5)} className="projects__block">
+						<img src={ShareIntro} alt="ShareGate" />
+						{/* TODO paralax in title */}
+						<div className="projects__block--title">
+							<h3>ShareGate</h3>
+							<h4>SiteWeb</h4>
+						</div>
+					</div>
 				</div>
-				<a className="externalLinks" href="https://dribbble.com/alexiabf" target="_blank" rel="noreferrer">
+				{/* <a className="externalLinks" href="https://dribbble.com/alexiabf" target="_blank" rel="noreferrer">
 					Voir plus de projets
 					<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
 					</svg>
-				</a>
+				</a> */}
 			</div>
 
 			<div className="main-block sideHustle">
@@ -173,25 +214,31 @@ function Home() {
 			<div className="main-block playground" />
 
 			<div className="contact__block">
-				<div className="content-wrapper">
+				
+				<div className="content-wrapper" id="sheetWrapper">
+
 					<h2>Veux tu sortir avec moi</h2>
 					<div className="formBlock">
 						<div className="yes">
-							<canvas id="canvasYes" width="72" height="72" />
+							<div className="block" width="72" height="72" />
 							<span>Yes</span>
 						</div>
 
 						<div className="no">
-							<canvas id="canvasNo" width="72" height="72" />
+							<div className="block" width="72" height="72" />
 							<span>No</span>
 						</div>
+
+						<canvas id="sheet" />
 					</div>
+				</div>
+				<div className="content-wrapper" id="sheetWrapper">
 					<p className="contactPromp">
 						Si tu as envie de travailler avec moi ou tout simplement de discuter, n’hésite pas à&nbsp;
 						<a href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
 						.
 					</p>
-
+					
 					<div className="separator">
 						<svg width="1370" height="18" viewBox="0 0 1370 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 9C19.24 -1.66667 28.36 -1.66667 46.6 9C64.84 19.6667 73.96 19.6667 92.2 9C110.44 -1.66667 119.56 -1.66667 137.8 9C156.04 19.6667 165.16 19.6667 183.4 9C201.64 -1.66667 210.76 -1.66667 229 9C247.24 19.6667 256.36 19.6667 274.6 9C292.84 -1.66667 301.96 -1.66667 320.2 9C338.44 19.6667 347.56 19.6667 365.8 9C384.04 -1.66667 393.16 -1.66667 411.4 9C429.64 19.6667 438.76 19.6667 457 9C475.24 -1.66667 484.36 -1.66667 502.6 9C520.84 19.6667 529.96 19.6667 548.2 9C566.44 -1.66667 575.56 -1.66667 593.8 9C612.04 19.6667 621.16 19.6667 639.4 9C657.64 -1.66667 666.76 -1.66667 685 9C703.24 19.6667 712.36 19.6667 730.6 9C748.84 -1.66667 757.96 -1.66667 776.2 9C794.44 19.6667 803.56 19.6667 821.8 9C840.04 -1.66667 849.16 -1.66667 867.4 9C885.64 19.6667 894.76 19.6667 913 9C931.24 -1.66667 940.36 -1.66667 958.6 9C976.84 19.6667 985.96 19.6667 1004.2 9C1022.44 -1.66667 1031.56 -1.66667 1049.8 9C1068.04 19.6667 1077.16 19.6667 1095.4 9C1113.64 -1.66667 1122.76 -1.66667 1141 9C1159.24 19.6667 1168.36 19.6667 1186.6 9C1204.84 -1.66667 1213.96 -1.66667 1232.2 9C1250.44 19.6667 1259.56 19.6667 1277.8 9C1296.04 -1.66667 1305.16 -1.66667 1323.4 9C1341.64 19.6667 1350.76 19.6667 1369 9" stroke="#FF1A00" strokeWidth="2" />
@@ -230,6 +277,7 @@ function Home() {
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 

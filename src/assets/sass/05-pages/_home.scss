@@ -261,9 +261,13 @@
 }
 .contact__block {
 	padding: 200px 0px;
-	// position: fixed;
+	position: relative;
 	background-color: $c-backround-intro;
 	z-index: -1;
+
+	&:hover {
+		cursor: url('../../images/pencil.svg') 0 50, auto !important;
+	}
 
 	h2 {
 		color: $c-accent3;
@@ -286,6 +290,17 @@
 			color: $c-accent3;
 		}
 	}
+	#sheetWrapper {
+		position: relative;
+	}
+	.canvas-container {
+		position: absolute !important;
+		top:0;
+		left: 0;
+		&:hover {
+			cursor: url('../../images/pencil.svg') 0 50, auto;
+		}
+	}
 }
 
 .separator {
@@ -296,16 +311,15 @@
 	justify-content: center;
 
 	
-	canvas {
+	.block {
 		border: 2px solid $c-accent2;
-		&:hover {
-			cursor: url('../../images/pencil.svg') 0 50, auto;
-		}
+		width: 72px;
+		height: 72px;
 	}
 
 	div {
 		&:first-child {
-			margin-right: 67px;
+			padding-right: 67px;
 		}
 		span {
 			display: block;

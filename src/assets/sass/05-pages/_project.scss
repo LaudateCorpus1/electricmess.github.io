@@ -30,6 +30,7 @@
 		display: flex;
 		align-items: flex-start;
 		width: 100%;
+		padding-bottom: 200px;
 		&--left {
 			max-width: 920px;
 			padding-right: 220px;
@@ -74,7 +75,7 @@
 
 	&__colorBG {
 		position: relative;
-		padding: 400px 0px;
+		padding: 400px 0px 200px;
 		text-align: center;
 		&:before {
 			content: '';
@@ -86,8 +87,8 @@
 		}
 
 		.computer {
-		}
-		.gif {
+			position: relative;
+			z-index: 10;
 		}
 
 		&--1 {
@@ -97,33 +98,73 @@
 		}
 
 		&--2 {
-			background-color: #292929;
+			&:before {
+				background-color: #7878FA;
+			}
 		}
 
 		&--3 {
-			background-color: #292929;
-		}
-
-		&--4 {
-			background-color: #292929;
+			&:before {
+				background-color: #E85B54;
+			}
 		}
 
 		&--5 {
-			background-color: #292929;
+			&:before {
+				background-color: #0E1C3D;
+			}
 		}
 	}
 
 	&__image {
 		margin: 200px 0;
+		&:first-of-type {
+			margin-top: 0;
+		}
 		&--golden {
 			background-color: #D1B16C;
-		}
+		}		
+
 		&--black {
 			background-color: #292929;
 		}
+
+		&--net1 {
+			background-color: #FF7E7C;
+		}
+
+		&--net2 {
+			background-color: #FFBC00;
+			margin: 0;
+			padding: 200px 0;
+		}
+
+		&--mtl1 {
+			background-color: #F5B55E;
+		}
+
+		&--grav1 {
+			background-color: #D1B16C;
+		}
+
+		&--share1 {
+			background-color: #F2720D;
+		}
+
+		&--share2 {
+			background-color: #98E8DE;
+		}
+
+		&--share3 {
+			background-color: #0E1C3D;
+		}
+
+
 		img {
+			//TODO padding mobile
 			display: block;
-			// max-width: 1374px;
+			max-width: 1374px;
+			width: 100%;
 			margin: 0 auto;
 		}
 	}

@@ -25,6 +25,7 @@ function App() {
 			options={
 				{
 					smooth: true,
+					multiplier: 1.25,
 				}
 			}
 			watch={

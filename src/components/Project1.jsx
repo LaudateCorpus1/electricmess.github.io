@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import computer from '../assets/images/projects/computer.png';
-import projectGif from '../assets/images/projects/jaxx.gif';
+import projectGif from '../assets/images/projects/elliotjaxx-gif1.gif';
 import projectImage1 from '../assets/images/projects/elliotjaxx-img2.jpg';
-import projectImage2 from '../assets/images/projects/elliotjaxx-img3.jpg';
+import projectImage2 from '../assets/images/projects/elliotjaxx-img3.png';
 import projectImage3 from '../assets/images/projects/elliotjaxx-img4.jpg';
 import projectImage4 from '../assets/images/projects/elliotjaxx-img5.jpg';
 import projectImage5 from '../assets/images/projects/elliotjaxx-img7.jpg';
@@ -82,7 +82,7 @@ function Project1() {
 				</div>
 				<div className="project__colorBG project__colorBG--1">
 					<div className="content-wrapper">
-						<img className="computer" src={computer} alt="computer" />
+						<img className="computer" src={projectGif} alt="computer" />
 					</div>
 				</div>
 	
