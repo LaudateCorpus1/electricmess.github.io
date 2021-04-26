@@ -1,7 +1,7 @@
 export const ROUTES = {
-	project1: '/projet1',
-	project2: '/projet2',
-	project3: '/projet3',
-	project4: '/projet4',
-	project5: '/projet5',
+	project1: '/elliot-jaxx',
+	project2: '/netmath',
+	project3: '/montreal-interactive',
+	project4: '/gravi-t',
+	project5: '/sharegate',
 };
