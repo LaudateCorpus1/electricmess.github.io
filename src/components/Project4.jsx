@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router';
+
 import projectImage1 from '../assets/images/projects/grav-img1.jpg';
 import projectImage2 from '../assets/images/projects/grav-img2.png';
 import projectImage3 from '../assets/images/projects/grav-img3.jpg';
@@ -21,6 +23,7 @@ function Project4() {
 		scroll.scrollTo(0, 0);
 	}
 
+	const history = useHistory();
 	loadPage('.project-page', loadCompleted);
 	function loadCompleted() {
 		console.log('loading done');

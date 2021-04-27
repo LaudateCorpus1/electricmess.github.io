@@ -241,7 +241,7 @@ function Home() {
 
 				<div className="content-wrapper" id="sheetWrapper">
 
-					<h2>Veux tu sortir avec moi</h2>
+					<h2>Veux tu sortir avec moi ?</h2>
 					<div className="formBlock">
 						<div className="yes">
 							<div className="block" width="72" height="72" />

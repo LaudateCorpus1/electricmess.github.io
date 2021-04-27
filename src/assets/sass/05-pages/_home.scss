@@ -80,7 +80,7 @@
 		max-width: 75%;
 		position: relative;
 		transform: translateY(50px);
-		animation: introFadeUp 750ms 5.5s forwards;
+		animation: introFadeUp 500ms 5.25s forwards;
 	}
 
 	@keyframes introFadeUp {
@@ -96,7 +96,7 @@
 
 	.arrowDown {
 		position: absolute;
-		bottom: 0;
+		bottom: 5px;
 		left: 50%;
 		opacity: 0;
 		transform: translateX(-50%);
@@ -121,7 +121,7 @@
 
 	@keyframes upDown {
 		from {
-			bottom: 0;
+			bottom: 5px;
 		}
 		to {
 			bottom: 15px;

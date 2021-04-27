@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router';
+
 import projectGif from '../assets/images/projects/mtli-gif1.gif';
 import projectImage1 from '../assets/images/projects/mtl-img2.jpg';
 import projectImage2 from '../assets/images/projects/mtl-img3.jpg';
@@ -24,6 +26,7 @@ function Project3() {
 		scroll.scrollTo(0, 0);
 	}
 
+	const history = useHistory();
 	loadPage('.project-page', loadCompleted);
 	function loadCompleted() {
 		console.log('loading done');
@@ -50,7 +53,7 @@ function Project3() {
 					<div className="project__header">
 						<div className="project__header--left">
 							<h2>Contexte</h2>
-							<p>Anciennement appelée SketchMTL, MTLi est une communautée locale de design existant depuis 2016. Passant de l’organisation d’événements, d’ateliers de mentorats, de cours en ligne, de formations ou bien juste pour jaser, nous aidons les designers à se perfectionner.</p>
+							<p>Anciennement appelée SketchMTL, MTLi est une communauté locale de design existant depuis 2016. Passant de l’organisation d’événements, d’ateliers de mentorats, de cours en ligne, de formations ou bien juste pour jaser, nous aidons les designers à se perfectionner.</p>
 							<a href="https://discord.gg/7pQHXzcjWx" className="externalLinks" target="_blank" rel="noreferrer">
 								Joindre notre Discord
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">

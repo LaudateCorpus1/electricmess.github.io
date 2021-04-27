@@ -204,6 +204,9 @@
 			text-align: center;
 			color: $c-accent3;
 			font-family: $f-bold;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 		@include below($tablet-width) {
 			padding-top: 50px;

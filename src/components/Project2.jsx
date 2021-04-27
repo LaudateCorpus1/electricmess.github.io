@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { useHistory } from 'react-router';
+
 import projectGif from '../assets/images/projects/net-gif1.gif';
 import projectGif2 from '../assets/images/projects/net-gif2.gif';
 import projectImage1 from '../assets/images/projects/netmath-img2.jpg';
@@ -20,6 +22,7 @@ function Project2() {
 		scroll.scrollTo(0, 0);
 	}
 
+	const history = useHistory();
 	loadPage('.project-page', loadCompleted);
 	function loadCompleted() {
 		console.log('loading done');

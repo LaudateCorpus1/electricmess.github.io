@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router';
+
 import projectGif from '../assets/images/projects/sharegate-gif1.gif';
 import projectImage1 from '../assets/images/projects/share-img2.jpg';
 import projectImage2 from '../assets/images/projects/share-img3.png';
@@ -19,6 +21,7 @@ function Project5() {
 		scroll.scrollTo(0, 0);
 	}
 
+	const history = useHistory();
 	loadPage('.project-page', loadCompleted);
 	function loadCompleted() {
 		console.log('loading done');
