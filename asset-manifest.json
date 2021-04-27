@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.77b1c249.chunk.css",
-    "main.js": "/static/js/main.34ab0d9b.chunk.js",
-    "main.js.map": "/static/js/main.34ab0d9b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c8acd196.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c8acd196.js.map",
-    "static/js/2.6a42baca.chunk.js": "/static/js/2.6a42baca.chunk.js",
-    "static/js/2.6a42baca.chunk.js.map": "/static/js/2.6a42baca.chunk.js.map",
+    "main.css": "/static/css/main.9dcbe552.chunk.css",
+    "main.js": "/static/js/main.46f875ff.chunk.js",
+    "main.js.map": "/static/js/main.46f875ff.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e24d97a2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e24d97a2.js.map",
+    "static/js/2.dbc46d36.chunk.js": "/static/js/2.dbc46d36.chunk.js",
+    "static/js/2.dbc46d36.chunk.js.map": "/static/js/2.dbc46d36.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.77b1c249.chunk.css.map": "/static/css/main.77b1c249.chunk.css.map",
-    "static/js/2.6a42baca.chunk.js.LICENSE.txt": "/static/js/2.6a42baca.chunk.js.LICENSE.txt",
+    "static/css/main.9dcbe552.chunk.css.map": "/static/css/main.9dcbe552.chunk.css.map",
+    "static/js/2.dbc46d36.chunk.js.LICENSE.txt": "/static/js/2.dbc46d36.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/static/media/pencil.4f1474c3.svg",
-    "static/media/LinkedIn.b9e48834.svg": "/static/media/LinkedIn.b9e48834.svg",
+    "static/media/LinkedIn.2c8d88d7.svg": "/static/media/LinkedIn.2c8d88d7.svg",
+    "static/media/art-1.f6bc906f.jpg": "/static/media/art-1.f6bc906f.jpg",
+    "static/media/art-2.3748c172.gif": "/static/media/art-2.3748c172.gif",
+    "static/media/art-3.d3bddb69.jpg": "/static/media/art-3.d3bddb69.jpg",
+    "static/media/art-4.20dcf032.jpg": "/static/media/art-4.20dcf032.jpg",
+    "static/media/art-5.5f2c3051.jpg": "/static/media/art-5.5f2c3051.jpg",
+    "static/media/art-6.e03ba224.gif": "/static/media/art-6.e03ba224.gif",
     "static/media/computer.cb3683cf.png": "/static/media/computer.cb3683cf.png",
     "static/media/elliot-jax-intro.08d1c75e.jpg": "/static/media/elliot-jax-intro.08d1c75e.jpg",
     "static/media/elliotjaxx-gif1.26e6593a.gif": "/static/media/elliotjaxx-gif1.26e6593a.gif",
@@ -58,9 +64,9 @@
     "static/media/smiley.2c8b375e.svg": "/static/media/smiley.2c8b375e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c8acd196.js",
-    "static/js/2.6a42baca.chunk.js",
-    "static/css/main.77b1c249.chunk.css",
-    "static/js/main.34ab0d9b.chunk.js"
+    "static/js/runtime-main.e24d97a2.js",
+    "static/js/2.dbc46d36.chunk.js",
+    "static/css/main.9dcbe552.chunk.css",
+    "static/js/main.46f875ff.chunk.js"
   ]
 }
