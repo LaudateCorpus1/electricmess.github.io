@@ -43,14 +43,8 @@ function Project1() {
 					</h1>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Mandat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum metus a nisi lobortis, sit amet luctus nulla ullamcorper. onec porta, nunc sed blandit laoreet, ex lacus vulputate odio, vel ultrices est ligula eu turpis. Nunc hendrerit pretium pulvinar. Morbi bibendum urna in felis ornare scelerisque. </p>
-							<a href="direction" className="externalLinks" target="_blank">
-								Voir la version en ligne
-								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
-								</svg>
-							</a>
+							<h2>Contexte</h2>
+							<p>Loin des centres d’entrainement traditionnels, Gravi-T est un gym privé haut-de-game qui offre une prise en charge complète et modulée. Plaçant ses client·e·s au centre de leur offre de services, Gravi-t est une solution unique pour atteindre ses objectifs de mise en forme.</p>							
 						</div>
 						<div className="project__header--right">
 							<h2>Ce que j’ai fait</h2>

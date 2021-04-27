@@ -47,8 +47,8 @@ function Project1() {
 					</h1>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Mandat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum metus a nisi lobortis, sit amet luctus nulla ullamcorper. onec porta, nunc sed blandit laoreet, ex lacus vulputate odio, vel ultrices est ligula eu turpis. Nunc hendrerit pretium pulvinar. Morbi bibendum urna in felis ornare scelerisque. </p>
+							<h2>Contexte</h2>
+							<p>Anciennement appelée SketchMTL, MTLi est une communautée locale de design existant depuis 2016. Passant de l’organisation d’événements, d’ateliers de mentorats, de cours en ligne, de formations ou bien juste pour jaser, nous aidons les designers à se perfectionner.</p>
 							<a href="direction" className="externalLinks" target="_blank">
 								Joindre notre Discord
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">

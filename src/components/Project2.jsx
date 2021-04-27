@@ -39,8 +39,8 @@ function Project1() {
 					<h1>Netmath</h1>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Mandat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum metus a nisi lobortis, sit amet luctus nulla ullamcorper. onec porta, nunc sed blandit laoreet, ex lacus vulputate odio, vel ultrices est ligula eu turpis. Nunc hendrerit pretium pulvinar. Morbi bibendum urna in felis ornare scelerisque. </p>
+							<h2>Contexte</h2>
+							<p>Étant dans la plupart des écoles du Québec, Netmath est reconnu comme pour un outil d’apprentissage ludique et efficace. En 2020, un nouveau volet complet s’ajoutait à la collection : des exercices pour les élèves de Primaire 1 et 2. J’ai donc redesigné la plateforme afin de l’adapter pour des enfants en bas âge.</p>
 							<a href="direction" className="externalLinks" target="_blank">
 								Voir la version en ligne
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">

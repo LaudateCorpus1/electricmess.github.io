@@ -40,8 +40,8 @@ function Project1() {
 					</h1>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Mandat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum metus a nisi lobortis, sit amet luctus nulla ullamcorper. onec porta, nunc sed blandit laoreet, ex lacus vulputate odio, vel ultrices est ligula eu turpis. Nunc hendrerit pretium pulvinar. Morbi bibendum urna in felis ornare scelerisque. </p>
+							<h2>Contexte</h2>
+							<p>À cette époque, ShareGate venait de refaire son identité visuelle et avait besoin d’un nouveau site marketing. Passant d’un produit à une marque multi-produits, il fallait carrément tout repenser. J’ai fait le design complet du site principal ainsi que quelques micro-sites pour du contenu exclusif.</p>
 							<a href="direction" className="externalLinks" target="_blank">
 								Voir la version en ligne
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ function Project1() {
 									Assurance qualité
 								</li>		
 								<li>
-									Collaboration avec l’équipe design, les illustrateur·trice·s et l’équipe de développement.
+									Collaboration avec l’équipe design, les créateur·trice·s de 	contenu, les illustrateur·trice·s et l’équipe de développement.
 								</li>								
 							</ul>
 						</div>

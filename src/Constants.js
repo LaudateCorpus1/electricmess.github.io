@@ -1,4 +1,5 @@
 export const ROUTES = {
+	home: '/',
 	project1: '/elliot-jaxx',
 	project2: '/netmath',
 	project3: '/montreal-interactive',

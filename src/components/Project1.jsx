@@ -39,8 +39,8 @@ function Project1() {
 					<h1>Elliot Jaxx</h1>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Mandat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum metus a nisi lobortis, sit amet luctus nulla ullamcorper. onec porta, nunc sed blandit laoreet, ex lacus vulputate odio, vel ultrices est ligula eu turpis. Nunc hendrerit pretium pulvinar. Morbi bibendum urna in felis ornare scelerisque. </p>
+							<h2>Contexte</h2>
+							<p>Création d’un site web sur mesure pour Elliot Jaxx, une compagnie qui offre des ateliers haut-de-game. Cette vitrine permet de non seulement d’augmenter leur crédibilité, mais également de mettre en valeur l’unicité de leur approche, voir l’offre de services ainsi que bien comprendre l’identité d’Elliot Jaxx.</p>
 							<a href="direction" className="externalLinks" target="_blank">
 								Voir la version en ligne
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ function Project1() {
 							<h2>Ce que j’ai fait</h2>
 							<ul className="list">
 								<li>
-									Prise de besoins
+									Gestion client
 								</li>
 								<li>
 									Wireframes
@@ -71,9 +71,6 @@ function Project1() {
 								</li>
 								<li>
 									Collaboration avec le dev
-								</li>
-								<li>
-									Suivi client
 								</li>
 							</ul>
 						</div>
