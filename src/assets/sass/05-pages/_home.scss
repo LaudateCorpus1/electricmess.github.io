@@ -23,7 +23,7 @@
 	width: 100%;
 	flex-direction: column;
 	justify-content: center;
-	background-image: url('../../images/bg-intro.jpg');
+	background-image: url("../../images/bg-intro.jpg");
 
 	&__title {
 		font-size: 4.15em;
@@ -35,19 +35,22 @@
 		span {
 			display: inline-block;
 			transform-origin: 0 0;
-		}		
+		}
+		@include below($tablet-width) {
+			font-size: 3.15em;
+		}
 	}
 
 	&__mask {
 		overflow: hidden;
 		position: relative;
-		&:nth-child(1n) span{			
+		&:nth-child(1n) span {
 			animation-delay: 3.5s;
 		}
-		&:nth-child(2n) span{
+		&:nth-child(2n) span {
 			animation-delay: 4s;
 		}
-		&:nth-child(3n) span{
+		&:nth-child(3n) span {
 			animation-delay: 4.5s;
 		}
 	}
@@ -98,8 +101,14 @@
 		opacity: 0;
 		transform: translateX(-50%);
 		animation: arrowDown 750ms 6s forwards, upDown 1s 6.5s ease-in-out alternate infinite;
+		@include below($tablet-width) {
+			animation: arrowDown 750ms 6s forwards, upDownMobile 1s 6.5s ease-in-out alternate infinite;
+			svg {
+				max-width: 15px;
+				height: 20px;
+			}
+		}
 	}
-	
 
 	@keyframes arrowDown {
 		from {
@@ -119,6 +128,15 @@
 		}
 	}
 
+	@keyframes upDownMobile {
+		from {
+			bottom: 0;
+		}
+		to {
+			bottom: 5px;
+		}
+	}
+
 	.circleDown {
 		position: absolute;
 		bottom: 0;
@@ -127,9 +145,15 @@
 		svg path {
 			stroke-dasharray: 1000;
 			stroke-dashoffset: -1000;
-			animation: circleDown 1.5s  5s ease-in-out forwards;
+			animation: circleDown 1.5s 5s ease-in-out forwards;
 		}
-	} 
+		@include below($tablet-width) {
+			svg {
+				max-width: 75px;
+				height: 37px;
+			}
+		}
+	}
 
 	@keyframes circleDown {
 		from {
@@ -143,25 +167,46 @@
 
 .half {
 	padding: 200px 0;
+
+	@include below($tablet-width) {
+		padding: 50px 0 0;
+	}
+
 	.content-wrapper {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		@include below($tablet-width) {
+			display: block;
+		}
 	}
 
 	&__title {
 		width: 50%;
+
+		@include below($tablet-width) {
+			width: 100%;
+		}
 	}
 
 	&__content {
 		width: 50%;
+
+		@include below($tablet-width) {
+			width: 100%;
+		}
+
 		p {
 			font-size: 2em;
-			line-height:  1.2em;
+			line-height: 1.2em;
 			font-family: $f-default;
 			color: $c-accent2;
 			margin-bottom: 40px;
-		}		
+			@include below($tablet-width) {
+				line-height: 1.4em;
+				margin-bottom: 15px;
+			}
+		}
 	}
 
 	h3 {
@@ -169,38 +214,69 @@
 		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent2;
+		@include below($tablet-width) {
+			line-height: 1em;
+			margin-bottom: 25px;
+		}
 	}
 }
 
-.scroll-separator h2 {
-	text-transform:uppercase;
-	display: inline-block;
-	white-space: nowrap;
-	animation: floatText 20s infinite linear;
-	padding-left: 100%; /*Initial offset, which places the text off-screen*/
-	font-size: 10.15em;
-	line-height: 1.2em;
-	font-family: $f-bold;
-	color: $c-accent1;
-	opacity: 0.5;
+.scroll-separator {
+	position: relative;
+	padding: 100px 0;
+	@include below($tablet-width) {
+		padding: 50px 0;
+	}
 
-	@keyframes floatText {
-		to {
-			transform: translateX(-100%);
+	h2 {
+		position: absolute;
+		left: 0;
+		text-transform: uppercase;
+		display: inline-block;
+		white-space: nowrap;
+		animation: floatText 20s infinite linear;
+		padding-left: 100%; /*Initial offset, which places the text off-screen*/
+		font-size: 10.15em;
+		line-height: 1.2em;
+		font-family: $f-bold;
+		color: $c-accent1;
+		opacity: 0.5;
+		@include below($tablet-width) {
+			display: none;
 		}
+		@keyframes floatText {
+			to {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+
+.project-scroll {
+	@include below($tablet-width) {
+		padding-top: 50px;
 	}
 }
 
 .projects {
 	margin-top: -100px;
+	@include below($tablet-width) {
+		margin-top: -65px;
+	}
 	&__block {
 		text-decoration: none;
 		position: relative;
 		margin-bottom: 280px;
+		@include below($tablet-width) {
+			margin-bottom: 50px;
+		}
 		&:hover {
-			cursor: url('../../images/cursor.svg'), auto;
+			cursor: url("../../images/cursor.svg"), auto;
 			img {
 				transform: scale(1.05);
+				@include below($tablet-width) {
+					transform: scale(1);
+				}
 			}
 		}
 		img {
@@ -212,6 +288,9 @@
 			line-height: 1.2em;
 			font-family: $f-bold;
 			color: $c-accent2;
+			@include below($tablet-width) {
+				margin-top: 16px;
+			}
 		}
 
 		h4 {
@@ -225,8 +304,12 @@
 			position: absolute;
 			right: 0;
 			bottom: 50px;
-			// transform: translateX(-50%);
 			text-align: right;
+			@include below($tablet-width) {
+				position: relative;
+				text-align: left;
+				bottom: 0;
+			}
 		}
 	}
 
@@ -239,17 +322,23 @@
 	}
 }
 
-
 .sideHustle {
-
 	text-align: center;
 
+	@include below($tablet-width) {
+		padding: 0 15px;
+		text-align: left;
+	}
+
 	h2 {
-		font-size: 3.5em;
+		font-size: 4.5em;
 		line-height: 1.2em;
 		font-family: $f-bold;
 		color: $c-accent2;
 		margin-bottom: 21px;
+		@include below($tablet-width) {
+			margin-bottom: 0px;
+		}
 	}
 
 	p {
@@ -257,43 +346,65 @@
 		margin: 0 auto 57px;
 		font-size: 2em;
 		line-height: 1.2em;
-		font-family: $f-bold;
+		font-family: $f-default;
 		color: $c-accent2;
+
+		@include below($tablet-width) {
+			margin-bottom: 0px;
+		}
 	}
 }
-
-.art-grid { 
+.playground {
+	position: relative;
+	margin-top: -100px;
+	background-color: transparent;
+	@include below($tablet-width) {
+		margin-top: -65px;
+	}
+}
+.art-grid {
 	.masonry-grid {
 		display: -webkit-box; /* Not needed if autoprefixing */
 		display: -ms-flexbox; /* Not needed if autoprefixing */
 		display: flex;
 		margin-left: -30px; /* gutter size offset */
 		width: auto;
-	  }
-	  .masonry-grid_column {
+		@include below($tablet-width) {
+			margin-left: 0px; /* gutter size offset */
+		}
+	}
+	.masonry-grid_column {
 		padding-left: 30px; /* gutter size */
 		background-clip: padding-box;
-	  }
-	  
-	  /* Style your items */
-	  .masonry-grid_column > img { /* change div to reference your elements you put in <Masonry> */
+		@include below($tablet-width) {
+			padding-left: 0px; /* gutter size */
+		}
+	}
+
+	/* Style your items */
+	.masonry-grid_column > img {
+		/* change div to reference your elements you put in <Masonry> */
 		margin-bottom: 75px;
-	  }
+	}
 }
 
 .contact__block {
 	padding: 200px 0px;
 	position: relative;
-	background-color: $c-backround-intro;
+	background-color: $c-background-intro;
 	z-index: -1;
 
+	@include below($tablet-width) {
+		padding: 0px 0px;
+	}
+
 	&:hover {
-		cursor: url('../../images/pencil.svg') 0 50, auto !important;
+		cursor: url("../../images/pencil.svg") 0 50, auto !important;
 	}
 
 	h2 {
 		color: $c-accent3;
-		font-size:  3.5em;
+		font-size: 3.5em;
 		line-height: 1.2em;
 		font-family: $f-bold;
 		max-width: 640px;
@@ -303,13 +414,16 @@
 
 	#sheetWrapper {
 		position: relative;
+		@include below($tablet-width) {
+			display: none;
+		}
 	}
 	.canvas-container {
 		position: absolute !important;
-		top:0;
+		top: 0;
 		left: 0;
 		&:hover {
-			cursor: url('../../images/pencil.svg') 0 50, auto;
+			cursor: url("../../images/pencil.svg") 0 50, auto;
 		}
 	}
 }
@@ -318,7 +432,6 @@
 	display: flex;
 	justify-content: center;
 
-	
 	.block {
 		border: 2px solid $c-accent2;
 		width: 72px;
@@ -343,7 +456,15 @@
 .socials-wrapper {
 	padding: 0px 0px 200px;
 	position: relative;
-	background-color: $c-backround-intro;
+	background-color: $c-background-intro;
+	.separator {
+		@include below($tablet-width) {
+			padding: 50px 0 0 0;
+		}
+		svg {
+			max-width: 100%;
+		}
+	}
 	.socials {
 		text-align: center;
 		p {
@@ -356,7 +477,7 @@
 				color: $c-accent3;
 			}
 		}
-	
+
 		h3 {
 			font-size: 1.5em;
 			line-height: 1.2em;
@@ -364,7 +485,7 @@
 			color: $c-accent3;
 			margin-bottom: 16px;
 		}
-	
+
 		&__buttons {
 			display: flex;
 			justify-content: center;
@@ -375,17 +496,15 @@
 				border-radius: 50%;
 				border: 1px solid transparent;
 				transform: opacity 750ms ease-in-out;
-	
+
 				&:hover {
 					opacity: 0.8;
 				}
-	
-				svg { 
+
+				svg {
 					width: 100%;
 				}
 			}
 		}
 	}
 }
-
-

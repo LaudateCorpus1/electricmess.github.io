@@ -17,7 +17,7 @@
 //  [_GEN]  /  Generic
 //=========/------------------------------------------------
 .project {
-	padding: 200px 0;
+	padding: 200px 0 0;
 	position: relative;
 	h1 {
 		font-size: 4.15em;
@@ -31,15 +31,25 @@
 		align-items: flex-start;
 		width: 100%;
 		padding-bottom: 200px;
+		
+		@include below($tablet-width) {
+			display: block;
+			padding-bottom: 50px;
+		}
+
 		&--left {
 			max-width: 920px;
 			padding-right: 220px;
 			
+			@include below($tablet-width) {
+				padding-right: 0px;
+				padding-bottom: 40px;
+			}
 
 			h2 {
-				font-size: 2em;
+				font-size: 2.5em;
 				line-height: 1.2em;
-				font-family: $f-default;
+				font-family: $f-bold;
 				color: $c-accent2;
 				font-weight: 600;
 				margin-bottom: 16px;
@@ -51,10 +61,13 @@
 				font-family: $f-default;
 				color: $c-accent2;
 				margin-bottom: 32px;
+				@include below($tablet-width) {
+					margin-bottom: 16px;
+				}
 			}
 
 			a {
-				display: block;
+				display: inline-block;
 				font-size: 2em;
 				line-height: 1.2em;
 				font-family: $f-default;
@@ -63,9 +76,9 @@
 		}
 		&--right {
 			h2 {
-				font-size: 2em;
+				font-size: 2.5em;
 				line-height: 1.2em;
-				font-family: $f-default;
+				font-family: $f-bold;
 				color: $c-accent2;
 				font-weight: 600;
 				margin-bottom: 16px;
@@ -77,6 +90,11 @@
 		position: relative;
 		padding: 400px 0px 200px;
 		text-align: center;
+		@include below($tablet-width) {
+			padding-top: 100px;
+			padding-bottom: 25px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -84,6 +102,9 @@
 			height: 800px;
 			top: 0;
 			left: 0;
+			@include below($tablet-width) {
+				height: 200px;
+			}
 		}
 
 		.computer {
@@ -118,6 +139,11 @@
 
 	&__image {
 		margin: 200px 0;
+		
+		@include below($tablet-width) {
+			margin: 50px 0;
+		}
+
 		&:first-of-type {
 			margin-top: 0;
 		}
@@ -166,6 +192,21 @@
 			max-width: 1374px;
 			width: 100%;
 			margin: 0 auto;
+		}
+	}
+
+	.socials-wrapper {
+		padding-top: 100px;
+		.next-project { 
+			font-size: 4.15em;
+			line-height: 1.2em;
+			margin-bottom: 100px;
+			text-align: center;
+			color: $c-accent3;
+			font-family: $f-bold;
+		}
+		@include below($tablet-width) {
+			padding-top: 50px;
 		}
 	}
 }

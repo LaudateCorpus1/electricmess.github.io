@@ -23,13 +23,28 @@
 	justify-content: space-between;
 	padding: 41px;
 	z-index: 50;
+	
+	@include below($tablet-width) {
+		padding: 15px;
+	}
+
 	nav {
+		@include below($tablet-width) {
+			display: none;
+		}
 		span {
 			font-size: 1.5em;
 			line-height: 1.2em;
 			color: $c-accent3;
 			font-family: $f-default;
 			margin-left: 40px;
+		}
+	}
+
+	.logo {
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 }

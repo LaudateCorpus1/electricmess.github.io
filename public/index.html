@@ -39,13 +39,17 @@
         window.onload=function(){
 			var canvasSizing = document.getElementById("sheet");
 			var parent = document.getElementById("sheetWrapper");
-			canvasSizing.width = parent.offsetWidth;
-			canvasSizing.height = parent.offsetHeight;
+			if (parent) {
+				canvasSizing.width = parent.offsetWidth;
+				canvasSizing.height = parent.offsetHeight;
+			}
 
             var canvas = new fabric.Canvas('sheet');
-            canvas.isDrawingMode = true;
-            canvas.freeDrawingBrush.width = 2;
-            canvas.freeDrawingBrush.color = "#FF4000";
+			if (canvas) {
+				canvas.isDrawingMode = true;
+				canvas.freeDrawingBrush.width = 2;
+				canvas.freeDrawingBrush.color = "#FF4000";
+			}
         }
     </script>
 

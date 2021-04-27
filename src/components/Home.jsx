@@ -31,6 +31,11 @@ function Home() {
 		scroll.scrollTo(0, 0);
 	}
 
+	const breakpointColumnsObj = {
+		default: 2,
+		1025: 1,
+	};
+
 	const history = useHistory();
 	loadPage('.homepage');
 	function goToPage(route) {
@@ -42,12 +47,6 @@ function Home() {
 			});
 		}, 1000);
 	}
-
-
-	const canvas = new fabric.Canvas('sheet');
-	canvas.isDrawingMode = true;
-	canvas.freeDrawingBrush.width = 5;
-	canvas.freeDrawingBrush.color = '#292929';
 
 	return (
 		<div className="homepage" data-scroll-section>
@@ -93,14 +92,14 @@ function Home() {
 						<p>
 							Je travaille actuellement en tant que UI/UX designer pour&nbsp;
 							<a className="externalLinks" target="blank" href="https://nexusinno.com/">
-								Nexus Innovations.
+								Nexus&nbsp;Innovations.
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
 								</svg>
 							</a>
 						</p>
 						<p>
-							Je fais aussi partie de l’équipe de Montréal Interactive, une communauté locale de design existant depuis 5 ans. Étant donné la pandémie mondiale, nous somme surtout actif·ve·s sur&nbsp;
+							Je fais aussi partie de l’équipe de Montréal Interactive, une communauté locale de design existant depuis 5 ans. Étant donné la pandémie mondiale, nous sommes surtout actif·ve·s sur&nbsp;
 							<a className="externalLinks" target="blank" href="https://discord.gg/7pQHXzcjWx">
 								Discord.
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +148,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="main-block scroll-separator">
+			<div className="main-block scroll-separator project-scroll">
 				<h2>Projets selectionnées</h2>
 			</div>
 			<div className="main-block projects">
@@ -224,7 +223,7 @@ function Home() {
 				<div className="content-wrapper art-grid">
 
 					<Masonry
-						breakpointCols={2}
+						breakpointCols={breakpointColumnsObj}
 						className="masonry-grid"
 						columnClassName="masonry-grid_column" 
 					>

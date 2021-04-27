@@ -27,6 +27,10 @@ html {
     margin: 0 !important;
 
 	@media screen and (max-width: 1600px) {
+		font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (1600 - 320)));
+	}
+
+	@include below(360px) {
 		font-size: calc(6px + (16 - 6) * ((100vw - 320px) / (1600 - 320)));
 	}
 }
@@ -45,7 +49,7 @@ body {
     overflow-x: hidden;
     background-size: cover;
     text-align: left;
-    background-color: $c-backround;
+    background-color: $c-background;
     color: $c-white;
     height: 100%;
     position: relative;
@@ -57,7 +61,7 @@ body {
 	&::-webkit-scrollbar {
 		width: 0.5em;
 		height: 0.5em;
-		background: $c-backround;
+		background: $c-background;
 	}
 
 	&::-webkit-scrollbar-thumb {
@@ -71,23 +75,65 @@ main {
     position: relative;
 }
 
+.main-block {
+	background-color: $c-background;
+}
+
 .content-wrapper {
 	max-width: 1474px;
 	padding: 0 50px;
 	margin: 0 auto;
+	@include below($tablet-width) {
+		padding: 0 15px;
+	}
 }
 
 .externalLinks {
 	text-decoration: none;
 	position: relative;
-	color: $c-accent3;
-	
+	color: $c-accent3;	
 	font-family: $f-default;
-	svg path{
-		fill: $c-accent3;
+
+	&:hover {
+		&:after {
+			transform: translateY(5px);
+		}
+		svg {
+			transform: translate( 5px, -5px);
+		}
 	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $c-accent3;
+		transition: transform 250ms ease-in-out;
+	}
+
+	svg {
+		position: absolute;
+		transition: transform 250ms ease-in-out;
+		right: -35px;
+
+		@include below($tablet-width) {
+			right: -15px;
+			top: -10px;
+			max-width: 15px;
+		}
+
+		path{
+			fill: $c-accent3;
+		}
+	} 
 }
 
+#mainScroll {
+	background-color: $c-background;
+}
 //===========/----------------------------------------------
 //  [_MED]  /  Medias
 //=========/------------------------------------------------
