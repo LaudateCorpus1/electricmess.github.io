@@ -1,7 +1,7 @@
 import React from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { withRouter } from 'react-router-dom';
 import { useHistory } from 'react-router';
+import AOS from 'aos';
 
 import projectGif from '../assets/images/projects/sharegate-gif1.gif';
 import projectImage1 from '../assets/images/projects/share-img2.jpg';
@@ -11,18 +11,23 @@ import projectImage4 from '../assets/images/projects/share-img5.png';
 import projectImage5 from '../assets/images/projects/share-img6.jpg';
 import linkedin from '../assets/images/LinkedIn.svg';
 
+import { ROUTES } from '../Constants';
+
 import { loadPage, showLoader } from '../helper/loader';
 
 
 function Project5() {
 
-	const { scroll } = useLocomotiveScroll();
-	if (scroll) {
-		scroll.scrollTo(0, 0);
-	}
+	
+	setTimeout(() => {
+		window.scrollTo(0, 0);
+		AOS.init();
+	}, 500);
 
 	const history = useHistory();
+
 	loadPage('.project-page', loadCompleted);
+	
 	function loadCompleted() {
 		console.log('loading done');
 	}
@@ -37,9 +42,9 @@ function Project5() {
 		});
 	}
 	return (	
-		<div data-scroll-section className="project-page">
+		<div className="project-page">
 			<div className="main-block project">							
-				<div className="content-wrapper">
+				<div className="content-wrapper"> 
 					<h1>
 						ShareGate
 					</h1>
@@ -104,6 +109,16 @@ function Project5() {
 	
 				<div className="project__next socials-wrapper ">
 					<div className="content-wrapper">
+						<div className="next-project" onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)}>
+							<span>
+								Voir le prochain projet 
+							</span>
+							<i>
+								<svg width="57" height="52" viewBox="0 0 57 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M29.6947 1.80052L54.0681 25.8599L53.2135 26.7036L53.2135 25.3617L2.53294e-08 25.3617L2.73565e-08 27.3617L52.5468 27.3617L29.6947 49.9193L31.1181 51.3243L56.2032 26.5624L56.9148 25.8599L56.2032 25.1574L31.1181 0.395508L29.6947 1.80052Z" fill="#FF4000" />
+								</svg>
+							</i>
+						</div>
 						<div className="separator">
 							<svg width="1370" height="18" viewBox="0 0 1370 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 9C19.24 -1.66667 28.36 -1.66667 46.6 9C64.84 19.6667 73.96 19.6667 92.2 9C110.44 -1.66667 119.56 -1.66667 137.8 9C156.04 19.6667 165.16 19.6667 183.4 9C201.64 -1.66667 210.76 -1.66667 229 9C247.24 19.6667 256.36 19.6667 274.6 9C292.84 -1.66667 301.96 -1.66667 320.2 9C338.44 19.6667 347.56 19.6667 365.8 9C384.04 -1.66667 393.16 -1.66667 411.4 9C429.64 19.6667 438.76 19.6667 457 9C475.24 -1.66667 484.36 -1.66667 502.6 9C520.84 19.6667 529.96 19.6667 548.2 9C566.44 -1.66667 575.56 -1.66667 593.8 9C612.04 19.6667 621.16 19.6667 639.4 9C657.64 -1.66667 666.76 -1.66667 685 9C703.24 19.6667 712.36 19.6667 730.6 9C748.84 -1.66667 757.96 -1.66667 776.2 9C794.44 19.6667 803.56 19.6667 821.8 9C840.04 -1.66667 849.16 -1.66667 867.4 9C885.64 19.6667 894.76 19.6667 913 9C931.24 -1.66667 940.36 -1.66667 958.6 9C976.84 19.6667 985.96 19.6667 1004.2 9C1022.44 -1.66667 1031.56 -1.66667 1049.8 9C1068.04 19.6667 1077.16 19.6667 1095.4 9C1113.64 -1.66667 1122.76 -1.66667 1141 9C1159.24 19.6667 1168.36 19.6667 1186.6 9C1204.84 -1.66667 1213.96 -1.66667 1232.2 9C1250.44 19.6667 1259.56 19.6667 1277.8 9C1296.04 -1.66667 1305.16 -1.66667 1323.4 9C1341.64 19.6667 1350.76 19.6667 1369 9" stroke="#FF1A00" strokeWidth="2" />
@@ -115,8 +130,8 @@ function Project5() {
 									Si tu as envie de travailler avec moi ou tout simplement
 								<br />
 								de discuter, n’hésite pas à&nbsp;
-								<a href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
-								.
+								<a className="externalLinks" href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
+								. 
 							</p>
 							<h3>Tu peux aussi juste me stalker</h3>
 							<div className="socials__buttons">

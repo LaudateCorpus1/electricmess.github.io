@@ -1,11 +1,9 @@
 import React, { useRef } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useHistory } from 'react-router';
-import { fabric } from 'fabric';
 import Masonry from 'react-masonry-css';
+import AOS from 'aos';
 
+import { fabric } from 'fabric';
 import { ROUTES } from '../Constants';
 import ElliotJaxIntro from '../assets/images/projects/elliot-jax-intro.jpg';
 import NetMathIntro from '../assets/images/projects/netmath-intro.jpg';
@@ -25,11 +23,11 @@ import art6 from '../assets/images/art-5.jpg';
 
 
 function Home() {
-
-	const { scroll } = useLocomotiveScroll();
-	if (scroll) {
-		scroll.scrollTo(0, 0);
-	}
+	
+	setTimeout(() => {
+		window.scrollTo(0, 0);
+		AOS.init();
+	}, 500);
 
 	const breakpointColumnsObj = {
 		default: 2,
@@ -49,7 +47,7 @@ function Home() {
 	}
 
 	return (
-		<div className="homepage" data-scroll-section>
+		<div className="homepage">
 			<div className="main-block intro">
 				<div className="content-wrapper">
 					<div className="intro__content">
@@ -83,68 +81,84 @@ function Home() {
 
 			<div className="main-block half">
 				<div className="content-wrapper">
-					<h3 className="half__title">
-						En ce
-						<br />
-						moment
+					<h3 className="half__title" data-aos="in-view">						
+						<div className="aos__mask">
+							<div className="aos__content">
+								En ce
+								<br />
+								moment
+							</div>
+						</div>
 					</h3>
-					<div className="half__content">
-						<p>
-							Je travaille actuellement en tant que UI/UX designer pour&nbsp;
-							<a className="externalLinks" target="blank" href="https://nexusinno.com/">
-								Nexus&nbsp;Innovations.
-								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
-								</svg>
-							</a>
-						</p>
-						<p>
-							Je fais aussi partie de l’équipe de Montréal Interactive, une communauté locale de design existant depuis 5 ans. Étant donné la pandémie mondiale, nous sommes surtout actif·ve·s sur&nbsp;
-							<a className="externalLinks" target="blank" href="https://discord.gg/7pQHXzcjWx">
-								Discord.
-								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
-								</svg>
+					<div className="half__content" data-aos="in-view"> 
+						<div className="aos__mask">
+							<div className="aos__content">
+								<p>
+									Je travaille actuellement en tant que UI/UX designer pour&nbsp;
+									<a className="externalLinks" target="blank" href="https://nexusinno.com/">
+										Nexus&nbsp;Innovations.
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
+										</svg>
+									</a>
+								</p>
+								<p>
+									Je fais aussi partie de l’équipe de Montréal Interactive, une communauté locale de design existant depuis 5 ans. Étant donné la pandémie mondiale, nous sommes surtout actif·ve·s sur&nbsp;
+									<a className="externalLinks" target="blank" href="https://discord.gg/7pQHXzcjWx">
+										Discord.
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
+										</svg>
 
-							</a>
-						</p>
+									</a>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className="main-block half">
 				<div className="content-wrapper">
-					<h3 className="half__title">
-						Ce qui me
-						<br />
-						fait tripper
+					<h3 className="half__title" data-aos="in-view">
+						<div className="aos__mask">
+							<div className="aos__content">
+								Ce qui me
+								<br />
+								fait tripper
+							</div>
+						</div>
 					</h3>
-					<div className="half__content">
-						<ul className="list">
-							<li>
-								UI Design
-							</li>
-							<li>
-								Micro-interactions
-							</li>
-							<li>
-								Prototypes
-							</li>
-							<li>
-								Design systems
-							</li>
-							<li>
-								Illustration
-							</li>
-							<li>
-								Branding
-							</li>
-							<li>
-								Assurance qualité
-							</li>
-							<li>
-								Apprendre et collaborer
-							</li>
-						</ul>
+					<div className="half__content" data-aos="in-view">
+						<div className="aos__mask">
+							<div className="aos__content">
+								<ul className="list">
+									<li>
+										UI Design
+									</li>
+									<li>
+										Micro-interactions
+									</li>
+									<li>
+										Prototypes
+									</li>
+									<li>
+										Design systems
+									</li>
+									<li>
+										Illustration
+									</li>
+									<li>
+										Branding
+									</li>
+									<li>
+										Assurance qualité
+									</li>
+									<li>
+										Apprendre et collaborer
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -155,50 +169,67 @@ function Home() {
 				<div className="content-wrapper">
 					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
 						<img src={ElliotJaxIntro} alt="Elliot Jax" />
-						{/* TODO paralax in title */}
-						<div className="projects__block--title">
-							<h3>Elliot Jaxx</h3>
-							<h4>Site Web</h4>
+						<div className="projects__block--title" data-aos="in-view">
+							<div className="aos__mask">
+								<div className="aos__content">
+									<h3>Elliot Jaxx</h3>
+									<h4>Site Web</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project2)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project2)} className="projects__block">
-						<img src={NetMathIntro} alt="NetMath" />
-						{/* TODO paralax in title */}
-						<div className="projects__block--title">
-							<h3>Nethmath</h3>
-							<h4>Application Web</h4>
+						<div data-aos="in-view">
+							<img className="aos__images" src={NetMathIntro} alt="NetMath" />
+						</div>
+						<div className="projects__block--title" data-aos="in-view">
+							<div className="aos__mask">
+								<div className="aos__content">
+									<h3>Netmath</h3>
+									<h4>Application Web</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project3)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project3)} className="projects__block">
 						<img src={MtlIntIntro} alt="Montréal Interactive" />
-						{/* TODO paralax in title */}
-						<div className="projects__block--title">
-							<h3>
-								Montréal
-								<br />
-								Interactive
-							</h3>
-							<h4>Direction artistique</h4>
+						<div className="projects__block--title" data-aos="in-view">
+							<div className="aos__mask">
+								<div className="aos__content">
+									<h3>
+										Montréal
+										<br />
+										Interactive
+									</h3>
+									<h4>Direction artistique</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project4)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project4)} className="projects__block">
 						<img src={GravIntro} alt="Gravi-t" />
-						{/* TODO paralax in title */}
-						<div className="projects__block--title">
-							<h3>Gravi-t</h3>
-							<h4>Logo</h4>
+						<div className="projects__block--title" data-aos="in-view">
+							<div className="aos__mask">
+								<div className="aos__content">
+									<h3>Gravi-t</h3>
+									<h4>Logo</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project5)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project5)} className="projects__block">
 						<img src={ShareIntro} alt="ShareGate" />
-						{/* TODO paralax in title */}
-						<div className="projects__block--title">
-							<h3>ShareGate</h3>
-							<h4>SiteWeb</h4>
+						<div className="projects__block--title" data-aos="in-view">
+							<div className="aos__mask">
+								<div className="aos__content">
+									<h3>ShareGate</h3>
+									<h4>SiteWeb</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -210,9 +241,13 @@ function Home() {
 				</a> */}
 			</div>
 
-			<div className="main-block sideHustle">
-				<h2>Side Hustle</h2>
-				<p>En dehors des heures de travail, j&apos;explore en illustration. Welcome to my playground</p>
+			<div className="main-block sideHustle" data-aos="in-view">
+				<div className="aos__mask">
+					<div className="aos__content">
+						<h2>Side Hustle</h2>
+						<p>En dehors des heures de travail, j&apos;explore en illustration. Welcome to my playground.</p>
+					</div>
+				</div>
 			</div>
 
 			<div className="main-block scroll-separator">
@@ -270,7 +305,7 @@ function Home() {
 								Si tu as envie de travailler avec moi ou tout simplement
 							<br />
 							de discuter, n’hésite pas à&nbsp;
-							<a href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
+							<a className="externalLinks" href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
 							.
 						</p>
 						<h3>Tu peux aussi juste me stalker</h3>

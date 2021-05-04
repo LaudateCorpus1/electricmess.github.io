@@ -392,7 +392,6 @@
 	padding: 200px 0px;
 	position: relative;
 	background-color: $c-background-intro;
-	z-index: -1;
 
 	@include below($tablet-width) {
 		padding: 0px 0px;
@@ -436,6 +435,7 @@
 		border: 2px solid $c-accent2;
 		width: 72px;
 		height: 72px;
+		margin-bottom: 15px;
 	}
 
 	div {

@@ -152,16 +152,60 @@ ul {
 		margin-bottom: 15px;
 		padding-left: 37px;
 		position: relative;
+		@include below($mobile-width) {
+			padding-left: 15px;
+		}
+
 		&::before {
 			content: "";
 			position: absolute;
 			left: 0;
-			top: 50%;
+			top: 19px;
 			width: 15px;
 			height: 15px;
 			transform: translateY(-50%);
 			border: 2px solid $c-accent1;
 			border-radius: 50%;
+			@include below($mobile-width) {
+				top: 10px;
+				width: 7px;
+				height: 7px;
+			}
+
+		}
+	}
+}
+
+
+[data-aos="in-view"] {
+	.aos {
+		&__mask {
+			overflow: hidden;
+			position: relative;
+		}
+		&__content {
+			position: relative;
+			transform-origin: 0 0;
+			transition: transform 1s ease-in-out;
+			transform: translateY(100%) rotate(5deg);
+		}
+		&__images {
+			position: relative;
+			transform-origin: 0 0;
+			transition: transform 1s ease-in-out;
+			transform: translateY(100%);
+			opacity: 0;
+		}
+	}
+	&.aos-animate {
+		.aos__images {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.aos__content {
+			transform: translateY(0) rotate(0);
+			
 		}
 	}
 }

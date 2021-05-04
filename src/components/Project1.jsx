@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { useHistory } from 'react-router';
+import AOS from 'aos';
 
 import projectGif from '../assets/images/projects/elliotjaxx-gif1.gif';
 import projectImage1 from '../assets/images/projects/elliotjaxx-img2.jpg';
@@ -17,13 +17,16 @@ import linkedin from '../assets/images/LinkedIn.svg';
 
 function Project1() {
 
-	const { scroll } = useLocomotiveScroll();
-	if (scroll) {
-		scroll.scrollTo(0, 0);
-	}
+	
+	setTimeout(() => {
+		window.scrollTo(0, 0);
+		AOS.init();
+	}, 500);
 
 	const history = useHistory();
+
 	loadPage('.project-page', loadCompleted);
+	
 	function loadCompleted() {
 		console.log('loading done');
 	}
@@ -38,7 +41,7 @@ function Project1() {
 		});
 	}
 	return (	
-		<div data-scroll-section className="project-page">
+		<div className="project-page">
 			<div className="main-block project">							
 				<div className="content-wrapper">
 					<h1>Elliot Jaxx</h1>
@@ -106,7 +109,16 @@ function Project1() {
 	
 				<div className="project__next socials-wrapper ">
 					<div className="content-wrapper">
-						<div className="next-project" onClick={() => goToPage(ROUTES.project2)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project2)}>Voir le prochain projet </div>
+						<div className="next-project" onClick={() => goToPage(ROUTES.project2)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project2)}>
+							<span>
+								Voir le prochain projet 
+							</span>
+							<i>
+								<svg width="57" height="52" viewBox="0 0 57 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M29.6947 1.80052L54.0681 25.8599L53.2135 26.7036L53.2135 25.3617L2.53294e-08 25.3617L2.73565e-08 27.3617L52.5468 27.3617L29.6947 49.9193L31.1181 51.3243L56.2032 26.5624L56.9148 25.8599L56.2032 25.1574L31.1181 0.395508L29.6947 1.80052Z" fill="#FF4000" />
+								</svg>
+							</i>
+						</div>
 						<div className="separator">
 							<svg width="1370" height="18" viewBox="0 0 1370 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 9C19.24 -1.66667 28.36 -1.66667 46.6 9C64.84 19.6667 73.96 19.6667 92.2 9C110.44 -1.66667 119.56 -1.66667 137.8 9C156.04 19.6667 165.16 19.6667 183.4 9C201.64 -1.66667 210.76 -1.66667 229 9C247.24 19.6667 256.36 19.6667 274.6 9C292.84 -1.66667 301.96 -1.66667 320.2 9C338.44 19.6667 347.56 19.6667 365.8 9C384.04 -1.66667 393.16 -1.66667 411.4 9C429.64 19.6667 438.76 19.6667 457 9C475.24 -1.66667 484.36 -1.66667 502.6 9C520.84 19.6667 529.96 19.6667 548.2 9C566.44 -1.66667 575.56 -1.66667 593.8 9C612.04 19.6667 621.16 19.6667 639.4 9C657.64 -1.66667 666.76 -1.66667 685 9C703.24 19.6667 712.36 19.6667 730.6 9C748.84 -1.66667 757.96 -1.66667 776.2 9C794.44 19.6667 803.56 19.6667 821.8 9C840.04 -1.66667 849.16 -1.66667 867.4 9C885.64 19.6667 894.76 19.6667 913 9C931.24 -1.66667 940.36 -1.66667 958.6 9C976.84 19.6667 985.96 19.6667 1004.2 9C1022.44 -1.66667 1031.56 -1.66667 1049.8 9C1068.04 19.6667 1077.16 19.6667 1095.4 9C1113.64 -1.66667 1122.76 -1.66667 1141 9C1159.24 19.6667 1168.36 19.6667 1186.6 9C1204.84 -1.66667 1213.96 -1.66667 1232.2 9C1250.44 19.6667 1259.56 19.6667 1277.8 9C1296.04 -1.66667 1305.16 -1.66667 1323.4 9C1341.64 19.6667 1350.76 19.6667 1369 9" stroke="#FF1A00" strokeWidth="2" />
@@ -118,7 +130,7 @@ function Project1() {
 									Si tu as envie de travailler avec moi ou tout simplement
 								<br />
 								de discuter, n’hésite pas à&nbsp;
-								<a href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
+								<a className="externalLinks" href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
 								.
 							</p>
 							<h3>Tu peux aussi juste me stalker</h3>
@@ -140,7 +152,6 @@ function Project1() {
 									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M37.5252 10.0305C35.2424 10.0305 33.1361 9.27427 31.4447 7.99849C29.5049 6.53599 28.1111 4.39067 27.6189 1.91802C27.4971 1.30708 27.4314 0.676611 27.4252 0.0305176H20.9041V17.8493L20.8963 27.6094C20.8963 30.2188 19.1971 32.4313 16.8416 33.2094C16.158 33.4352 15.4197 33.5422 14.651 33.5C13.6697 33.4461 12.7502 33.15 11.951 32.6719C10.2502 31.6547 9.09705 29.8094 9.0658 27.6985C9.01659 24.3993 11.6838 21.7094 14.9806 21.7094C15.6314 21.7094 16.2564 21.8157 16.8416 22.0086V17.1383V15.3875C16.2244 15.2961 15.5963 15.2485 14.9611 15.2485C11.3525 15.2485 7.97752 16.7485 5.56502 19.4508C3.74159 21.493 2.64784 24.0985 2.47909 26.8305C2.25799 30.4196 3.57127 33.8313 6.11815 36.3485C6.49237 36.718 6.88534 37.061 7.29627 37.3774C9.47987 39.0579 12.1494 39.9688 14.9611 39.9688C15.5963 39.9688 16.2244 39.9219 16.8416 39.8305C19.4681 39.4415 21.8916 38.2391 23.8041 36.3485C26.1541 34.0258 27.4525 30.9422 27.4666 27.6602L27.433 13.0852C28.5541 13.95 29.7799 14.6657 31.0955 15.2211C33.1416 16.0844 35.3111 16.5219 37.5439 16.5211V11.786V10.029C37.5455 10.0305 37.5267 10.0305 37.5252 10.0305Z" fill="#FF4000" />
 									</svg>
-
 
 								</a>
 							</div>

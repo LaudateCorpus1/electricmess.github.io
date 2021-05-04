@@ -198,15 +198,40 @@
 	.socials-wrapper {
 		padding-top: 100px;
 		.next-project { 
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
 			font-size: 4.15em;
 			line-height: 1.2em;
 			margin-bottom: 100px;
 			text-align: center;
 			color: $c-accent3;
 			font-family: $f-bold;
+			transition: all 350ms ease-in-out;
+			
+			@include below($tablet-width) {
+				margin-bottom: 50px;
+			}
+			
+			i {
+				@include below($tablet-width) {
+					display: none;
+				}
+				position: relative;
+				left : 25px;
+				transition: all 250ms ease-in-out;				
+			}
+
 			&:hover {
 				cursor: pointer;
+				opacity: 0.8;
+				i {
+					opacity: 0.8;
+					transform: translateX(15px);
+				}
 			}
+			
 		}
 		@include below($tablet-width) {
 			padding-top: 50px;
