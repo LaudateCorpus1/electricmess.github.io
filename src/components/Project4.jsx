@@ -126,7 +126,7 @@ function Project4() {
 								<a className="externalLinks" href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
 								.
 							</p>
-							<h3>Tu peux aussi juste me stalker</h3>
+							<h3>Tu peux aussi juste me stalker.</h3>
 							<div className="socials__buttons">
 								<a href="https://www.linkedin.com/in/alexiabf/" target="_blank" rel="noreferrer">
 									<img src={linkedin} alt="linkedin" />

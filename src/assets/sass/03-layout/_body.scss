@@ -186,14 +186,14 @@ ul {
 		&__content {
 			position: relative;
 			transform-origin: 0 0;
-			transition: transform 1s ease-in-out;
+			transition: all 1s ease-in-out;
 			transform: translateY(100%) rotate(5deg);
 		}
 		&__images {
 			position: relative;
 			transform-origin: 0 0;
-			transition: transform 1s ease-in-out;
-			transform: translateY(100%);
+			transition: all 1s ease-in-out;
+			transform: translateY(25%);
 			opacity: 0;
 		}
 	}
@@ -203,9 +203,8 @@ ul {
 			opacity: 1;
 		}
 
-		.aos__content {
+		.aos__content {			
 			transform: translateY(0) rotate(0);
-			
 		}
 	}
 }

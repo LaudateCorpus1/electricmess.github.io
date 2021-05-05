@@ -48,17 +48,17 @@
 			animation-delay: 3.5s;
 		}
 		&:nth-child(2n) span {
-			animation-delay: 4s;
+			animation-delay: 3.75s;
 		}
 		&:nth-child(3n) span {
-			animation-delay: 4.5s;
+			animation-delay: 4.25s;
 		}
 	}
 
 	&__text {
 		position: relative;
-		animation: maskMove 1s forwards;
-		animation-duration: 1s;
+		animation: maskMove 750ms forwards;
+		animation-duration: 750ms;
 		transform: translateY(100%) rotate(5deg);
 	}
 

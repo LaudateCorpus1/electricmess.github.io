@@ -81,7 +81,7 @@ function Home() {
 
 			<div className="main-block half">
 				<div className="content-wrapper">
-					<h3 className="half__title" data-aos="in-view">						
+					<h3 className="half__title">						
 						<div className="aos__mask">
 							<div className="aos__content">
 								En ce
@@ -90,7 +90,7 @@ function Home() {
 							</div>
 						</div>
 					</h3>
-					<div className="half__content" data-aos="in-view"> 
+					<div className="half__content"> 
 						<div className="aos__mask">
 							<div className="aos__content">
 								<p>
@@ -119,7 +119,7 @@ function Home() {
 			</div>
 			<div className="main-block half">
 				<div className="content-wrapper">
-					<h3 className="half__title" data-aos="in-view">
+					<h3 className="half__title">
 						<div className="aos__mask">
 							<div className="aos__content">
 								Ce qui me
@@ -128,7 +128,7 @@ function Home() {
 							</div>
 						</div>
 					</h3>
-					<div className="half__content" data-aos="in-view">
+					<div className="half__content">
 						<div className="aos__mask">
 							<div className="aos__content">
 								<ul className="list">
@@ -168,7 +168,9 @@ function Home() {
 			<div className="main-block projects">
 				<div className="content-wrapper">
 					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
-						<img src={ElliotJaxIntro} alt="Elliot Jax" />
+						<div data-aos="in-view">					
+							<img className="aos__images" src={ElliotJaxIntro} alt="Elliot Jax" />
+						</div>
 						<div className="projects__block--title" data-aos="in-view">
 							<div className="aos__mask">
 								<div className="aos__content">
@@ -194,7 +196,9 @@ function Home() {
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project3)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project3)} className="projects__block">
-						<img src={MtlIntIntro} alt="Montréal Interactive" />
+						<div data-aos="in-view">					
+							<img className="aos__images" src={MtlIntIntro} alt="Montréal Interactive" />
+						</div>
 						<div className="projects__block--title" data-aos="in-view">
 							<div className="aos__mask">
 								<div className="aos__content">
@@ -210,7 +214,10 @@ function Home() {
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project4)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project4)} className="projects__block">
-						<img src={GravIntro} alt="Gravi-t" />
+						<div data-aos="in-view">					
+							<img className="aos__images" src={GravIntro} alt="Gravi-t" />
+						</div>
+						
 						<div className="projects__block--title" data-aos="in-view">
 							<div className="aos__mask">
 								<div className="aos__content">
@@ -222,7 +229,9 @@ function Home() {
 					</div>
 
 					<div onClick={() => goToPage(ROUTES.project5)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project5)} className="projects__block">
-						<img src={ShareIntro} alt="ShareGate" />
+						<div data-aos="in-view">	
+							<img className="aos__images" src={ShareIntro} alt="ShareGate" />
+						</div>
 						<div className="projects__block--title" data-aos="in-view">
 							<div className="aos__mask">
 								<div className="aos__content">
@@ -260,14 +269,19 @@ function Home() {
 					<Masonry
 						breakpointCols={breakpointColumnsObj}
 						className="masonry-grid"
-						columnClassName="masonry-grid_column" 
+						columnClassName="masonry-grid_column"						
 					>
-						<img src={art1} alt="art-1" />
-						<img src={art2} alt="art-2" />
-						<img src={art3} alt="art-3" />
-						<img src={art4} alt="art-4" />
-						<img src={art5} alt="art-5" />
-						<img src={art6} alt="art-6" />
+						<img className="aos__images" src={art1} alt="art-1" />
+
+						<img className="aos__images" src={art2} alt="art-2" />
+
+						<img className="aos__images" src={art3} alt="art-3" />
+
+						<img className="aos__images" src={art4} alt="art-4" />
+
+						<img className="aos__images" src={art5} alt="art-5" />
+
+						<img className="aos__images" src={art6} alt="art-6" />
 					</Masonry>
 				</div>
 			</div>
@@ -308,7 +322,7 @@ function Home() {
 							<a className="externalLinks" href="mailto:alexia.brideau.francoeur@gmail.com">m’écrire</a>
 							.
 						</p>
-						<h3>Tu peux aussi juste me stalker</h3>
+						<h3>Tu peux aussi juste me stalker.</h3>
 						<div className="socials__buttons">
 							<a href="https://www.linkedin.com/in/alexiabf/" target="_blank" rel="noreferrer">
 								<img src={linkedin} alt="linkedin" />
