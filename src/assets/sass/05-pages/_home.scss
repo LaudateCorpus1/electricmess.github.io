@@ -270,6 +270,9 @@
 		@include below($tablet-width) {
 			margin-bottom: 50px;
 		}
+		.aos__images--wrapper {
+			overflow: hidden;
+		}
 		&:hover {
 			cursor: url("../../images/cursor.svg"), auto;
 			img {

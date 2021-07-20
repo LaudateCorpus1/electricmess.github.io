@@ -208,3 +208,27 @@ ul {
 		}
 	}
 }
+
+.aos__maskProject {	
+	overflow: hidden;
+	position: relative;
+
+	.aos__content {
+		position: relative;
+		transform-origin: 0 0;
+		opacity: 0;
+		transform: translateY(100%) rotate(5deg);
+		animation: maskMoveProject 500ms 3.5s forwards;
+	}
+
+	@keyframes maskMoveProject {
+		0% {
+			transform: translateY(100%) rotate(5deg);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0) rotate(0);
+		}
+	}
+}
+

@@ -48,44 +48,56 @@ function Project3() {
 		<div className="project-page">
 			<div className="main-block project">							
 				<div className="content-wrapper">
-					<h1>
-						Montréal
-						<br />
-						Interactive
-					</h1>
+					<div className="aos__maskProject">
+						<div className="aos__content">
+							<h1>
+								Montréal
+								<br />
+								Interactive
+							</h1>
+						</div>
+					</div>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Contexte</h2>
-							<p>Anciennement appelée SketchMTL, MTLi est une communauté locale de design existant depuis 2016. Passant de l’organisation d’événements, d’ateliers de mentorats, de cours en ligne, de formations ou bien juste pour jaser, nous aidons les designers à se perfectionner.</p>
-							<a href="https://discord.gg/7pQHXzcjWx" className="externalLinks" target="_blank" rel="noreferrer">
-								Joindre notre Discord
-								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
-								</svg>
-							</a>
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Contexte</h2>
+									<p>Anciennement appelée SketchMTL, MTLi est une communauté locale de design existant depuis 2016. Passant de l’organisation d’événements, d’ateliers de mentorat, de cours en ligne, de formations ou bien juste pour jaser, nous aidons les designers à se perfectionner.</p>
+									<a href="https://discord.gg/7pQHXzcjWx" className="externalLinks" target="_blank" rel="noreferrer">
+										Joindre notre Discord
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
+										</svg>
+									</a>
+								</div>
+							</div>
 						</div>
 						<div className="project__header--right">
-							<h2>Ce que j’ai fait</h2>
-							<ul className="list">
-								<li>
-									Direction artistique
-								</li>
-								<li>
-									Visuels médiaux sociaux
-								</li>
-								<li>
-									Visuels pour événements
-								</li>
-								<li>
-									Design du site web MTLi
-								</li>
-								<li>
-									Mentorat
-								</li>
-								<li>
-									Organisation événementielle
-								</li>
-							</ul>
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Ce que j’ai fait</h2>
+									<ul className="list">
+										<li>
+											Direction artistique
+										</li>
+										<li>
+											Visuels médiaux sociaux
+										</li>
+										<li>
+											Visuels pour événements
+										</li>
+										<li>
+											Design du site web MTLi
+										</li>
+										<li>
+											Mentorat
+										</li>
+										<li>
+											Organisation événementielle
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					

@@ -45,30 +45,42 @@ function Project4() {
 		<div className="project-page">
 			<div className="main-block project">							
 				<div className="content-wrapper">
-					<h1>
-						Gravi-t
-					</h1>
+					<div className="aos__maskProject">
+						<div className="aos__content">
+							<h1>
+								Gravi-t
+							</h1>
+						</div>
+					</div>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Contexte</h2>
-							<p>Loin des centres d’entrainement traditionnels, Gravi-T est un gym privé haut-de-game qui offre une prise en charge complète et modulée. Plaçant ses client·e·s au centre de leur offre de services, Gravi-t est une solution unique pour atteindre ses objectifs de mise en forme.</p>							
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Contexte</h2>
+									<p>Loin des centres d’entrainement traditionnels, Gravi-T est un gym privé haut-de-game qui offre une prise en charge complète et modulée. Plaçant ses client·e·s au centre de leur offre de services, Gravi-t est une solution unique pour atteindre ses objectifs de mise en forme.</p>							
+								</div>
+							</div>
 						</div>
 						<div className="project__header--right">
-							<h2>Ce que j’ai fait</h2>
-							<ul className="list">
-								<li>
-									Gestion client
-								</li>
-								<li>
-									Ateliers créatifs
-								</li>
-								<li>
-									Logo
-								</li>
-								<li>
-									Brand guidelines
-								</li>								
-							</ul>
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Ce que j’ai fait</h2>
+									<ul className="list">
+										<li>
+											Gestion client
+										</li>
+										<li>
+											Ateliers créatifs
+										</li>
+										<li>
+											Logo
+										</li>
+										<li>
+											Brand guidelines
+										</li>								
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					

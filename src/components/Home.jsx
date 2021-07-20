@@ -94,9 +94,9 @@ function Home() {
 						<div className="aos__mask">
 							<div className="aos__content">
 								<p>
-									Je travaille actuellement en tant que UI/UX designer pour&nbsp;
-									<a className="externalLinks" target="blank" href="https://nexusinno.com/">
-										Nexus&nbsp;Innovations.
+								Je travaille actuellement en tant que UI designer chez &nbsp;
+									<a className="externalLinks" target="blank" href="https://deuxhuithuit.com/fr">
+										Deux&nbsp;Huit&nbsp;Huit.
 										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
 										</svg>
@@ -169,7 +169,7 @@ function Home() {
 				<div className="content-wrapper">
 					<div onClick={() => goToPage(ROUTES.project1)} tabIndex={0} role="button" onKeyDown={() => goToPage(ROUTES.project1)} className="projects__block">
 						<div data-aos="in-view">					
-							<img className="aos__images" src={ElliotJaxIntro} alt="Elliot Jax" />
+							<img className="aos__images" src={ElliotJaxIntro} alt="Elliot Jaxx" />
 						</div>
 						<div className="projects__block--title" data-aos="in-view">
 							<div className="aos__mask">

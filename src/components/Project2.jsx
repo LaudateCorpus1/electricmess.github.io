@@ -43,37 +43,49 @@ function Project2() {
 		<div className="project-page">
 			<div className="main-block project">							
 				<div className="content-wrapper">
-					<h1>Netmath</h1>
+					<div className="aos__maskProject">
+						<div className="aos__content">
+							<h1>Netmath</h1>
+						</div>
+					</div>
 					<div className="project__header">
 						<div className="project__header--left">
-							<h2>Contexte</h2>
-							<p>Étant dans la plupart des écoles du Québec, Netmath est reconnu comme pour un outil d’apprentissage ludique et efficace. En 2020, un nouveau volet complet s’ajoutait à la collection : des exercices pour les élèves de Primaire 1 et 2. J’ai donc redesigné la plateforme afin de l’adapter pour des enfants en bas âge.</p>
-							<a href="https://www.netmaths.net/SignIn" className="externalLinks" target="_blank" rel="noreferrer">
-								Voir la version en ligne
-								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
-								</svg>
-							</a>
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Contexte</h2>
+									<p>Étant dans la plupart des écoles du Québec, Netmath est reconnu comme pour un outil d’apprentissage ludique et efficace. En 2020, un nouveau volet complet s’ajoutait à la collection : des exercices pour les élèves de Primaire 1 et 2. J’ai donc redesigné la plateforme afin de l’adapter pour des enfants en bas âge.</p>
+									<a href="https://www.netmaths.net/SignIn" className="externalLinks" target="_blank" rel="noreferrer">
+										Voir la version en ligne
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fillRule="evenodd" clipRule="evenodd" d="M21.5889 10.414L8.35038 23.6525L6.93617 22.2383L19.5637 9.6108L9.3527 9.6108L9.3527 7.6108L22.5889 7.6108L23.5889 7.6108L23.5889 8.6108L23.5889 21.847L21.5889 21.847L21.5889 10.414Z" fill="#FF4000" />
+										</svg>
+									</a>
+								</div>
+							</div>
 						</div>
 						<div className="project__header--right">
-							<h2>Ce que j’ai fait</h2>
-							<ul className="list">
-								<li>
-									Direction artistique
-								</li>
-								<li>
-									Maquettes
-								</li>
-								<li>
-									Micro interactions
-								</li>
-								<li>
-									Assurance qualité
-								</li>
-								<li>
-									Collaboration avec l’équipe design, les illustrateur·trice·s et l’équipe de développement.
-								</li>
-							</ul>
+							<div className="aos__maskProject">
+								<div className="aos__content">
+									<h2>Ce que j’ai fait</h2>
+									<ul className="list">
+										<li>
+											Direction artistique
+										</li>
+										<li>
+											Maquettes
+										</li>
+										<li>
+											Micro interactions
+										</li>
+										<li>
+											Assurance qualité
+										</li>
+										<li>
+											Collaboration avec l’équipe design, les illustrateur·trice·s et l’équipe de développement.
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					
